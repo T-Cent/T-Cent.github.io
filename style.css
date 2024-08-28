@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+.grid {
+    margin-left: 30px;
+    margin-top: 0px;
+    height: 100%;
+    width: 1px;
+    background-color: rgb(65, 59, 71);
+}
+
+.grid:hover {
+    margin-left: 30px;
+    margin-top: 0px;
+    height: 100%;
+    width: 1px;
+    background-color: rgb(25, 194, 110);
+}
+
+/* #3d_scene {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50px;     
+    left: 50px; 
+    z-index: 1;
+} */
+
+.evariste {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 20%;
+    padding-top: 20px;
+    color: darkgoldenrod;
+    z-index: 2;
+}
