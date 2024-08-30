@@ -1,0 +1,29 @@
+.something {
+    color: aqua;
+    z-index: 100000000;
+}
+
+.something:hover {
+    color: brown;
+    z-index: 100000000;
+}
+
+.visible {
+    display: block;
+}
+
+#exitbutton {
+    background-color: black;
+}
+
+.lalala {
+    position: fixed;
+    top: 100px;
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
+
+.lalala:hover {
+    background-color: brown;
+}

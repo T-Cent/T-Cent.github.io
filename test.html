@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="style_test.css">
+</head>
+<body>
+    <!--don't put anything before <a-scene>-->
+    <a-scene>
+        <a-camera id="camera" look-controls="enabled: false" wasd-controls="enabled: false"></a-camera>
+        <a-assets>
+            <a-asset-item id="Model" src="./untitled.glb"></a-assets-item>
+        </a-assets>
+
+        <a-entity gltf-model="#Model"></a-entity>
+    </a-scene>
+
+    <div class="lalala"></div>
+    <canvas id="canvas"></canvas>
+
+    <script src="./test.js"></script>
+    
+</body>
+</html>
