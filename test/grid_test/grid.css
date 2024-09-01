@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    overflow: hidden;
+    perspective: 2000px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+
+#container {
+    width: 100px;
+    height: 100px;
+    display: grid;
+    aspect-ratio: 1;
+    grid-template-rows: repeat(40, 1fr);
+    grid-template-columns: repeat(40, 1fr);
+    position: absolute;
+    transform: rotateX(50deg) rotateY(-5deg) rotateZ(20deg) scale(1.25);
+}
+
+.tile {
+    border: 20px solid rgb(255 255 255 / 25%);
+}
