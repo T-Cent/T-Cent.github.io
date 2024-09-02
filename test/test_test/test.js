@@ -18,23 +18,3 @@ document.addEventListener("keyup", (event) => {
     }
 })
 
-document.addEventListener("click", (event) => {
-    console.log(event.x, event.y);
-})
-
-const x = document.querySelector(".something");
-console.log(x.x, x.y);
-
-const press_button = document.querySelector("#exitbutton");
-press_button.addEventListener("click", function () {
-    press_button.style.backgroundColor = "blue";
-    console.log("hello");
-})
-
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-
-ctx.beginPath();
-ctx.moveTo(30, 30);
-ctx.bezierCurveTo(120, 160, 180, 10, 220, 140);
-ctx.stroke();

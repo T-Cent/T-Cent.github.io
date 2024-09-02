@@ -9,17 +9,15 @@
 </head>
 <body>
     <!--don't put anything before <a-scene>-->
+    <!-- Apparently not?1?! i dunno bro -->
     <a-scene>
         <a-camera id="camera" look-controls="enabled: false" wasd-controls="enabled: false"></a-camera>
         <a-assets>
-            <a-asset-item id="Model" src="./untitled.glb"></a-assets-item>
+            <a-asset-item id="Model" src="../untitled.glb"></a-assets-item>
         </a-assets>
 
         <a-entity gltf-model="#Model"></a-entity>
     </a-scene>
-
-    <div class="lalala"></div>
-    <canvas id="canvas"></canvas>
 
     <script src="./test.js"></script>
     
