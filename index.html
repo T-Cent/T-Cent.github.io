@@ -8,25 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <svg id="container" width="100%" height="100%">
+    <svg id="background" width="100%" height="100%">
         <path class="path_curve" stroke="rgba(60, 60, 0, 0.5)" stroke-width="1" fill="transparent"/>
     </svg>
     <h1 class="evariste">Èvariste</h1>
-
-    <p class="introduction">
+    
+    <a class="test" href="./SPTs/SPT-16.pdf">click me</a>
+    <p class="evariste">
         Evariste is our clubs' Mathematical and Theoretical Science club.
     </p>
-    <a href="./SPTs/SPT-16.pdf">click me</a>
-    <a-scene>
+    <button class="evariste">hellllo</button>
+    <a-scene cursor="rayOrigin: mouse">
         <a-camera id="camera" look-controls="enabled: false" wasd-controls="enabled: false"></a-camera>
         <a-assets>
             <a-asset-item id="Model" src="./untitled1.glb"></a-assets-item>
         </a-assets>
-
+        <a-sphere class="abc" <!--onclick="foo()"--></a-sphere>></a-sphere>
         <a-entity gltf-model="#Model" animation-mixer></a-entity>
     </a-scene>
-
-    <h1>helllloooooooooo</h1>
     <script src="./script.js"></script>
 </body>
 </html>

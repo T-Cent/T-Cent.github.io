@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 20;
   }
 
   body, html {
@@ -9,11 +9,11 @@
     padding: 0;
     width: 100%;
     height: 100%;
-    position: relative;
-    overflow: hidden;
+    position: absolute;
+    /* overflow: hidden; */
 }
 
-#container {
+#background {
     position: absolute;
     z-index: 0;
 }
@@ -34,4 +34,50 @@
 
 .introduction {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.test {
+    position: relative;
+    z-index: 1;
+    color: antiquewhite;
+}
+
+.abc:click {
+    transition: 200ms;
+}
+
+.lists {
+    list-style-type: none;
+    padding: 50px;
+    line-height: 40px;
+}
+
+.zpc_table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+
+.zpc_table td {
+    padding: 20px;
+
+}
+
+.links {
+    color: palevioletred;
+    text-decoration: none;
+}
+
+.links:hover {
+    text-decoration: underline;
+}
+
+.buttons {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: bisque;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
 }

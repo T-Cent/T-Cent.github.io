@@ -2,8 +2,10 @@
 //! Handling the background
 function draw_curve (curve, start, end, control, factor, mouse_x, mouse_y, translate_x, translate_y) {
   const middle = new point((start.x + end.x)/2 + translate_x, (start.y + end.y)/2 + translate_y);
-  const dist = middle.distance(new point(mouse_x, mouse_y));
-  factor = 0.99 ** dist;
+//   const dist = middle.distance(new point(mouse_x, mouse_y));
+  const dist = mouse_x - start.x - translate_x;
+  factor = Math.E ** ((-0.01*dist)**2);
+  console.log(factor);
   control.multiply(factor);
   control.multiply(new point(Math.sign(middle.x-mouse_x), Math.sign(middle.y-mouse_y)));
   curve.setAttribute("d", `M${start.print()} Q${control.print()} ${end.print()}`);
@@ -59,15 +61,15 @@ class point {
   }
 }
 
-const container = document.querySelector("#container");
+const background = document.querySelector("#background");
 const one_curve = document.querySelector(".path_curve");
-let num_curves_x = 20;
-let num_curves_y = 17;
+let num_curves_x = 40;
+let num_curves_y = 25;
 const spacing = 25;
 
 //? Creating curves
 for (let i = 0; i < num_curves_x + num_curves_y; i++) {
-  container.appendChild(one_curve.cloneNode())
+  background.appendChild(one_curve.cloneNode())
 }
 // Horizontal curves
 const curves = document.querySelectorAll(".path_curve");
@@ -118,3 +120,20 @@ document.addEventListener("keyup", (event) => {
         }
     }
 })
+
+AFRAME.registerComponent("foo", {
+    events : {
+        click: function (event) {
+            console.log("i was touched");
+            this.el.setAttribute('material', 'color', 'red');
+        }
+    }
+})
+
+document.querySelector(".abc").addEventListener("click", (event) => {
+    console.log("touch meeee");
+})
+document.querySelector(".abc").addEventListener("mouseenter", (event) => {
+    console.log("touch eeeeee");
+})
+
