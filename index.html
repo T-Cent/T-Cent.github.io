@@ -21,9 +21,11 @@
     <a-scene cursor="rayOrigin: mouse">
         <a-camera id="camera" look-controls="enabled: false" wasd-controls="enabled: false"></a-camera>
         <a-assets>
-            <a-asset-item id="Model" src="./untitled1.glb"></a-assets-item>
+            <a-asset-item id="Model" src="./untitled2.glb"></a-assets-item>
         </a-assets>
-        <a-sphere class="abc" <!--onclick="foo()"--></a-sphere>></a-sphere>
+        <a-box class="sphere_zpc">
+            <a-animation position="0 0 -5" attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
+        </a-box>
         <a-entity gltf-model="#Model" animation-mixer></a-entity>
     </a-scene>
     <script src="./script.js"></script>

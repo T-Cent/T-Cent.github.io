@@ -1,9 +1,4 @@
 //! Handling documents
-// const list = document.querySelector(".lists");
-// const item = document.querySelector(".item");
-// list.append();
-// console.log(item)
-// item.innerText = "<a>";
 
 const body = document.querySelector(".zpc_table tbody");
 

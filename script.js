@@ -5,9 +5,9 @@ function draw_curve (curve, start, end, control, factor, mouse_x, mouse_y, trans
 //   const dist = middle.distance(new point(mouse_x, mouse_y));
   const dist = mouse_x - start.x - translate_x;
   factor = Math.E ** ((-0.01*dist)**2);
-  console.log(factor);
-  control.multiply(factor);
-  control.multiply(new point(Math.sign(middle.x-mouse_x), Math.sign(middle.y-mouse_y)));
+//   console.log(factor);
+//   control.multiply(factor);
+//   control.multiply(new point(Math.sign(middle.x-mouse_x), Math.sign(middle.y-mouse_y)));
   curve.setAttribute("d", `M${start.print()} Q${control.print()} ${end.print()}`);
   curve.setAttribute("transform", `translate(${translate_x}, ${translate_y})`)
 }
@@ -61,11 +61,13 @@ class point {
   }
 }
 
+const height = window.innerHeight;
+const width  = window.innerWidth;
 const background = document.querySelector("#background");
 const one_curve = document.querySelector(".path_curve");
-let num_curves_x = 40;
-let num_curves_y = 25;
 const spacing = 25;
+let num_curves_x = width/spacing;
+let num_curves_y = height/spacing;
 
 //? Creating curves
 for (let i = 0; i < num_curves_x + num_curves_y; i++) {
@@ -121,19 +123,21 @@ document.addEventListener("keyup", (event) => {
     }
 })
 
-AFRAME.registerComponent("foo", {
-    events : {
-        click: function (event) {
-            console.log("i was touched");
-            this.el.setAttribute('material', 'color', 'red');
-        }
-    }
-})
+// AFRAME.registerComponent("foo", {
+//     events : {
+//         click: function (event) {
+//             console.log("i was touched");
+//             this.el.setAttribute('material', 'color', 'red');
+//         }
+//     }
+// })
 
-document.querySelector(".abc").addEventListener("click", (event) => {
-    console.log("touch meeee");
+document.querySelector(".sphere_zpc").addEventListener("mouseenter", (event) => {
+    document.querySelector(".sphere_zpc").setAttribute("material.color", "red")
 })
-document.querySelector(".abc").addEventListener("mouseenter", (event) => {
-    console.log("touch eeeeee");
+document.querySelector(".sphere_zpc").addEventListener("click", (event) => {
+    // DelayNode(200);
+    // setTimeout(window.open("./zpc.html", "_self"), 600);
+    window.open("./zpc.html", "_self")
 })
 

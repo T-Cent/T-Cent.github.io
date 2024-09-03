@@ -42,22 +42,13 @@
     color: antiquewhite;
 }
 
-.abc:click {
-    transition: 200ms;
-}
-
-.lists {
-    list-style-type: none;
-    padding: 50px;
-    line-height: 40px;
-}
-
 .zpc_table {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid black;
+    position: relative;
+    z-index: 0;
 }
 
 .zpc_table td {
@@ -80,4 +71,11 @@
     border-radius: 5px;
     background-color: bisque;
     box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: fixed;
 }
