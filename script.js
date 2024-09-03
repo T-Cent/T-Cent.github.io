@@ -2,11 +2,15 @@
 //! Handling the background
 function draw_curve (curve, start, end, control, factor, mouse_x, mouse_y, translate_x, translate_y) {
   const middle = new point((start.x + end.x)/2 + translate_x, (start.y + end.y)/2 + translate_y);
-//   const dist = middle.distance(new point(mouse_x, mouse_y));
-  const dist = mouse_x - start.x - translate_x;
-  factor = Math.E ** ((-0.01*dist)**2);
+  const dist = middle.distance(new point(mouse_x, mouse_y));
+//   const dist = mouse_x - start.x - translate_x;
+//   factor = Math.E ** ((-0.01*dist)**2);
+  control.add(new point(translate_x, translate_y));
+  control.multiply(factor);
+  factor = 0.99 ** dist
+  control.multiply(factor);
+
 //   console.log(factor);
-//   control.multiply(factor);
 //   control.multiply(new point(Math.sign(middle.x-mouse_x), Math.sign(middle.y-mouse_y)));
   curve.setAttribute("d", `M${start.print()} Q${control.print()} ${end.print()}`);
   curve.setAttribute("transform", `translate(${translate_x}, ${translate_y})`)
@@ -66,8 +70,8 @@ const width  = window.innerWidth;
 const background = document.querySelector("#background");
 const one_curve = document.querySelector(".path_curve");
 const spacing = 25;
-let num_curves_x = width/spacing;
-let num_curves_y = height/spacing;
+let num_curves_x = Math.floor(width/spacing);
+let num_curves_y = Math.floor(height/spacing);
 
 //? Creating curves
 for (let i = 0; i < num_curves_x + num_curves_y; i++) {
@@ -76,12 +80,12 @@ for (let i = 0; i < num_curves_x + num_curves_y; i++) {
 // Horizontal curves
 const curves = document.querySelectorAll(".path_curve");
 for (let i = 0; i < num_curves_x; i++) {
-  draw_curve(curves[i], new point(50, 0), new point(50, 600), new point(1, 80), new point(2, 4), 0, 0, i*spacing, 0);
+  draw_curve(curves[i], new point(0, 0), new point(20, height), new point(1, 80), new point(2, 4), 0, 0, i*spacing, 0);
 }
 
 // Vertical curves
 for (let i = 0; i < num_curves_y; i++){
-  draw_curve(curves[num_curves_x+i], new point(0, 50), new point(1200, 50), new point(25, 20), new point(2, 4), 0, 0, 0, i*spacing);
+  draw_curve(curves[num_curves_x+i], new point(0, 50), new point(width, 50), new point(25, 20), new point(2, 4), 0, 0, 0, i*spacing);
 }
 
 document.addEventListener("mousemove", (event) => {
@@ -92,12 +96,12 @@ document.addEventListener("mousemove", (event) => {
   // Horizontal curves
   const curves = document.querySelectorAll(".path_curve");
   for (let i = 0; i < num_curves_x; i++) {
-      draw_curve(curves[i], new point(50, 0), new point(50, 600), new point(100, 100), new point(1, 1), mouse_x, mouse_y, i*spacing, 0);
+      draw_curve(curves[i], new point(0, 0), new point(20, height), new point(-mouse_x, -mouse_y), new point(0.9, 0.9), mouse_x, mouse_y, i*spacing, 0);
   }
 
   // Vertical curves
   for (let i = 0; i < num_curves_y; i++){
-      draw_curve(curves[num_curves_x+i], new point(0, 50), new point(1200, 50), new point(100, 100), new point(mouse_x, mouse_y), mouse_x, mouse_y, 0, i*spacing);
+      draw_curve(curves[num_curves_x+i], new point(0, 50), new point(width, 50), new point(-mouse_x, -mouse_y), new point(0.9, 0.9), mouse_x, mouse_y, 0, i*spacing);
   }
 
 })

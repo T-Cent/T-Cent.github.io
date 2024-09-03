@@ -79,3 +79,10 @@ canvas {
     z-index: 0;
     position: fixed;
 }
+
+.zpc_list_qp {
+    list-style: none;
+    padding: 20px;
+    position: relative;
+    margin: 20px;
+}

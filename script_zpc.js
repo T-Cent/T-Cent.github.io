@@ -35,9 +35,27 @@ function add_row(index) {
     body.appendChild(new_row);
 }
 
-const num_zpc = 30
+const lists = document.querySelector(".zpc_list_qp")
+
+function add_qp(index) {
+    let el = document.createElement('li');
+    let bt = document.createElement('button');
+    let li = document.createElement('a');
+
+    li.setAttribute("class", "links");
+    bt.setAttribute("class", "buttons");
+
+    li.textContent = "ZPC " + index;
+    bt.appendChild(li);
+    el.appendChild(bt);
+    
+    lists.appendChild(el);
+}
+
+const num_zpc = 6
 for (let i = 0; i < num_zpc; i++) {
 
     add_row(num_zpc-i);
+    // add_qp(i);
 
 }

@@ -671,3 +671,10 @@ window.addEventListener('touchend', (e) => {
             if (touches[i].identifier == pointers[j].id)
                 pointers[j].down = false;
 });
+
+function splat_regularly() {
+    multipleSplats(20);
+}
+
+update();
+setInterval(splat_regularly, 500)
