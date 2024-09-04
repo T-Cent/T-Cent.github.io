@@ -12,11 +12,11 @@ function add_row(index) {
     let Link2 = document.createElement('a');
 
 
-    Link1.textContent = "ZPC " + index;
-    Link2.textContent = "ZPC " + index + " Solutions"
+    Link1.textContent = "SPT " + index;
+    Link2.textContent = "SPT " + index + " Solutions"
 
-    Link1.setAttribute("href", `./ZPCs/ZPC_${index}.pdf`)
-    Link2.setAttribute("href", `./ZPCs/ZPC_${index}_Solutions.pdf`)
+    Link1.setAttribute("href", `./SPTs/SPT_${index}.pdf`)
+    Link2.setAttribute("href", `./SPTs/SPT_${index}_Solutions.pdf`)
     Link1.setAttribute("class", "links");
     Link2.setAttribute("class", "links");
 
@@ -35,7 +35,7 @@ function add_row(index) {
     body.appendChild(new_row);
 }
 
-const lists = document.querySelector(".zpc_list_qp")
+const lists = document.querySelector(".SPT_list_qp")
 
 function add_qp(index) {
     let el = document.createElement('li');
@@ -45,17 +45,17 @@ function add_qp(index) {
     li.setAttribute("class", "links");
     bt.setAttribute("class", "buttons");
 
-    li.textContent = "ZPC " + index;
+    li.textContent = "SPT " + index;
     bt.appendChild(li);
     el.appendChild(bt);
     
     lists.appendChild(el);
 }
 
-const num_zpc = 6
-for (let i = 0; i < num_zpc; i++) {
+const num_spt = 16
+for (let i = 0; i < num_spt; i++) {
 
-    add_row(num_zpc-i);
+    add_row(num_spt-i);
     // add_qp(i);
 
 }

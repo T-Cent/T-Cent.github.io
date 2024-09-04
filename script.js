@@ -145,3 +145,11 @@ document.querySelector(".sphere_zpc").addEventListener("click", (event) => {
     window.open("./zpc.html", "_self")
 })
 
+document.querySelector(".sphere_spt").addEventListener("mouseenter", (event) => {
+    document.querySelector(".sphere_spt").setAttribute("material.color", "red")
+})
+document.querySelector(".sphere_spt").addEventListener("click", (event) => {
+    // DelayNode(200);
+    // setTimeout(window.open("./spt.html", "_self"), 600);
+    window.open("./spt.html", "_self")
+})
