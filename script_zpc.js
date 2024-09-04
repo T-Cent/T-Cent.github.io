@@ -52,7 +52,7 @@ function add_qp(index) {
     lists.appendChild(el);
 }
 
-const num_zpc = 6
+const num_zpc = 30
 for (let i = 0; i < num_zpc; i++) {
 
     add_row(num_zpc-i);

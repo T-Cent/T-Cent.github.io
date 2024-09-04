@@ -9,17 +9,19 @@
 </head>
 <body>
     <svg id="background" width="100%" height="100%">
-        <path class="path_curve" stroke="rgba(60, 60, 0, 0.5)" stroke-width="1" fill="transparent"/>
+        <path class="path_curve" stroke="rgba(200, 200, 100, 0.5)" stroke-width="1" fill="transparent"/>
     </svg>
     <h1 class="evariste">Évariste</h1>
     
     <p class="evariste">
         Evariste is our clubs' Mathematical and Theoretical Science club.
     </p>
-    <a-scene cursor="rayOrigin: mouse">
+    <a-scene cursor="rayOrigin: mouse" raycaster="objects: a-box" fog="type: exponential; color: #000 density: 1">
+        <a-light type="directional" light="castShadow:true;" position="-1 1 1" intensity="2.5" shadow-camera-automatic="#objects"></a-light>
+
         <a-camera id="camera" look-controls="enabled: false" wasd-controls="enabled: false"></a-camera>
         <a-assets>
-            <a-asset-item id="Model" src="./untitled1.glb"></a-assets-item>
+            <a-asset-item id="Model" src="./house.gltf/house.glb"></a-assets-item>
         </a-assets>
         <a-box class="sphere_zpc" position="0 0 -5" color="rgb(100, 200, 0)">
             <a-animation position="0 0 -5" attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
@@ -27,10 +29,12 @@
         <a-box class="sphere_spt" position="2 3 -7" color="tomato" glow="10">
             <a-animation position="0 10 -5" attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
         </a-box>
-        <a-entity gltf-model="#Model" animation-mixer></a-entity>
+        <a-entity cast gltf-model="#Model" position="0 0 -7" rotation="0 20 0" animation-mixer></a-entity>
+        <a-plane position="0 0 -7" scale="10 10 10" rotation="90 90 90"></a-plane>
     </a-scene>
 
     <div id="links">
+
     </div>
     <script src="./script.js"></script>
 </body>

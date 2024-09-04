@@ -106,6 +106,59 @@ document.addEventListener("mousemove", (event) => {
 
 })
 
+document.addEventListener("mousedown", (event) => {
+  const mouse_x = event.x;
+  const mouse_y = event.y;
+  // Create curves
+
+  // Horizontal curves
+  const curves = document.querySelectorAll(".path_curve");
+  for (let i = 0; i < num_curves_x; i++) {
+      draw_curve(curves[i], new point(0, 0), new point(20, height), new point(-mouse_x, -mouse_y), new point(3, 3), mouse_x, mouse_y, i*spacing, 0);
+  }
+
+  // Vertical curves
+  for (let i = 0; i < num_curves_y; i++){
+      draw_curve(curves[num_curves_x+i], new point(0, 50), new point(width, 50), new point(-mouse_x, -mouse_y), new point(3, 3), mouse_x, mouse_y, 0, i*spacing);
+  }
+
+})
+
+document.addEventListener("mouseup", (event) => {
+  const mouse_x = event.x;
+  const mouse_y = event.y;
+  // Create curves
+
+  // Horizontal curves
+  const curves = document.querySelectorAll(".path_curve");
+  for (let i = 0; i < num_curves_x; i++) {
+      draw_curve(curves[i], new point(0, 0), new point(20, height), new point(-mouse_x, -mouse_y), new point(0.9, 0.9), mouse_x, mouse_y, i*spacing, 0);
+  }
+
+  // Vertical curves
+  for (let i = 0; i < num_curves_y; i++){
+      draw_curve(curves[num_curves_x+i], new point(0, 50), new point(width, 50), new point(-mouse_x, -mouse_y), new point(0.9, 0.9), mouse_x, mouse_y, 0, i*spacing);
+  }
+
+})
+document.addEventListener("mousedown", (event) => {
+  const mouse_x = event.x;
+  const mouse_y = event.y;
+  // Create curves
+
+  // Horizontal curves
+  const curves = document.querySelectorAll(".path_curve");
+  for (let i = 0; i < num_curves_x; i++) {
+      draw_curve(curves[i], new point(0, 0), new point(20, height), new point(-mouse_x, -mouse_y), new point(3, 3), mouse_x, mouse_y, i*spacing, 0);
+  }
+
+  // Vertical curves
+  for (let i = 0; i < num_curves_y; i++){
+      draw_curve(curves[num_curves_x+i], new point(0, 50), new point(width, 50), new point(-mouse_x, -mouse_y), new point(3, 3), mouse_x, mouse_y, 0, i*spacing);
+  }
+
+})
+
 //! Handling the 3d scene
 const movement_3d = document.querySelector("#camera");
 let timesPressedShift = 0;
@@ -114,12 +167,12 @@ function toggleControls(value) {
     movement_3d.setAttribute("wasd-controls", `enabled: ${value}`);
     movement_3d.setAttribute("look-controls",  `enabled: ${value}`);
 }
+toggleControls("true");
 
 document.addEventListener("keyup", (event) => {
     if (event.key === "Shift") {
         if (timesPressedShift === 0) {
             timesPressedShift = 1;
-            toggleControls("true");
         } else if (timesPressedShift === 1) {
             timesPressedShift = 0;
             toggleControls("false");
