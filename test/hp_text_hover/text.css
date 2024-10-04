@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+/* .card-letters {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    word-break: break-all;
+    opacity: 0.5;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background-blend-mode: multiply;
+    color: white;
+} */
+
+/* .card {
+    position: relative;
+} */
+
+.card-letters {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    word-break: break-all;
+    opacity: 0.6;
+    background: linear-gradient(90deg, rgb(103, 99, 166) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 70%, rgba(255,0,150,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* scale: 2; */
+}
+
+h1 {
+    user-select: none;
+    color: whitesmoke;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #DDB892;
+    /* top: 2rem; */
+    font-family: monospace;
+}
+
+h1:last-child {
+    border-bottom: none;
+}

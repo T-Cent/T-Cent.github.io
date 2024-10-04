@@ -1,0 +1,70 @@
+body {
+    overflow: hidden;
+}
+
+/* Style for the side menu */
+.side-menu {
+    height: 100%; /* Full height */
+    width: 0; /* Start hidden */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Dark background color */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.2s linear; /* Smooth slide-in transition */
+    padding-top: 60px; /* Add some padding at the top */
+}
+
+/* Menu links */
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 1s linear;
+}
+
+/* Menu link hover effect */
+.side-menu a:hover {
+    background-color: #575757;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    color: white;
+}
+
+/* Button to open the menu */
+#menuButton {
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+/* Open the menu */
+.side-menu.open {
+    width: 100%; /* Set the width when menu is opened */
+}
+
+.card-letters {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    word-break: break-all;
+    opacity: 0.6;
+    background: linear-gradient(90deg, rgba(103, 99, 166, 0) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 70%, rgba(255,0,150,0) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* scale: 2; */
+}
