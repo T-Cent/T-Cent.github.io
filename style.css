@@ -3,9 +3,10 @@
     /* margin: 0px; */
     /* padding: 20px; */
     user-select: none;
-  }
+}
 
-  body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -24,11 +25,10 @@
     z-index: 1;
     color: rgb(192, 197, 134);
     text-align: center;
-    margin-top: 20px;  
-    /* user-select: none; */
+    margin-top: 20px;
 }
 
-.evariste::selection{
+.evariste::selection {
     color: black;
     background-color: bisque;
 }
@@ -60,7 +60,6 @@
 
 .table td {
     padding: 20px;
-
 }
 
 .links {
@@ -111,10 +110,10 @@ canvas {
 .menubutton {
     position: absolute;
     left: 20%;
-    height: 1.5px;
-    width: 30px;
+    height: 4px;
+    width: 40px;
     z-index: 20;
-    background: rgba(162, 217, 79, 0.683);
+    background: rgba(57, 113, 113, 0.9);
     transition: transform 0.8s ease;
 }
 
@@ -148,10 +147,6 @@ canvas {
     background-color: rgb(27, 22, 22);
     transition: width 0.5s ease-in-out;
 }
-/* 
-#card.open {
-    width: 100%;
-} */
 
 .card-letters {
     position: absolute;
@@ -162,11 +157,10 @@ canvas {
     overflow: hidden;
     word-break: break-all;
     opacity: 0.6;
-    background: linear-gradient(90deg, rgb(103, 99, 166, 0) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 70%, rgba(255,0,150,1) 100%);
+    background: linear-gradient(90deg, rgb(103, 99, 166, 0) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 60%, rgba(255, 0, 150, 1) 80%, rgba(255, 0, 150, 0) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    /* scale: 2; */
 }
 
 .listlinks {
@@ -184,6 +178,6 @@ canvas {
     font-family: monospace
 }
 
-.final{
+.final {
     border-bottom: none;
 }
