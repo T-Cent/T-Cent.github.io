@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rain</title>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <img src="../../road diffuse.png" id="roadtex">
+            <a-asset-item id="Model" src="../../mech.glb"></a-assets-item>
+
+        </a-assets>
+        <a-entity gltf-model="#Model" position="0 0 -7" rotation="0 20 0" animation-mixer></a-entity>
+
+        <a-plane src="#roadtex" height="100" width="20"></a-plane>
+        </a-scene>
+</body>
+</html>
