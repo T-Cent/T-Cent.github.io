@@ -25,13 +25,18 @@
     color: rgb(192, 197, 134);
     text-align: center;
     margin-top: 20px;  
-    user-select: none;
+    /* user-select: none; */
+}
+
+.evariste::selection{
+    color: black;
+    background-color: bisque;
 }
 
 .evariste:hover {
     color: rgb(57, 113, 113);
     cursor: default;
-    user-select: none;
+    user-select: text;
 }
 
 .introduction {
@@ -150,24 +155,22 @@ canvas {
 
 .card-letters {
     position: absolute;
-    /* top: 0;
-    left: 0; */
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
     word-break: break-all;
     opacity: 0.6;
-    background: linear-gradient(90deg, rgb(103, 99, 166) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 70%, rgba(255,0,150,1) 100%);
+    background: linear-gradient(90deg, rgb(103, 99, 166, 0) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 70%, rgba(255,0,150,1) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     /* scale: 2; */
 }
 
-.menulinks {
+.listlinks {
     text-decoration: none;
-    border-bottom: 1px solid #DDB892;
-
 }
 
 .listitem {
@@ -177,14 +180,10 @@ canvas {
     text-align: center;
     padding: 20px;
     border-bottom: 1px solid #DDB892;
-    /* top: 2rem; */
-    font-family: monospace;
+    top: 10%;
+    font-family: monospace
 }
-/* 
-.listitem:first-child {
-    top: 30%;
-} */
 
-.listitem:last-child {
+.final{
     border-bottom: none;
 }

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Èvariste</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+
 </head>
 <body>
     <button id="menu">
@@ -13,10 +15,11 @@
     </button>
     <div id="card">
         <div class="card-letters"></div>
-        <a class="menulinks" href="./spt.html"><h1 class="listitem" data-value="SPT">SPT</h1></a>
-        <a class="menulinks" href="./zpc.html"><h1 class="listitem" data-value="ZPC">ZPC</h1></a>
+
+        <a class="listlinks" href="./spt.html"><h1 class="listitem" data-value="SPT">SPT</h1></a>
+        <a class="listlinks" href="./zpc.html"><h1 class="listitem" data-value="ZPC">ZPC</h1></a>
         <h1 class="listitem" data-value="Members">Members</h1>
-        <h1 class="listitem" data-value="Credits">Credits</h1>
+        <h1 class="listitem final" data-value="Credits">Credits</h1>
     </div>
     <svg id="background" width="100%" height="100%">
         <path class="path_curve" stroke="rgba(200, 200, 100, 0.5)" stroke-width="1" fill="transparent"/>
@@ -25,26 +28,30 @@
     <h1 class="evariste">Évariste</h1>
     
     <p class="evariste">
-        Evariste is our clubs' Mathematical and Theoretical Science club.
+        Evariste is our clubs' Mathematical and Theoretical Science club
     </p>
+
+    <a href="test/aframe_rain/rain.html">aframe testing</a>
     
-    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-    <a-scene cursor="rayOrigin: mouse" raycaster="objects: a-box" fog="type: exponential; color: #000;">
+    <a-scene cursor="rayOrigin: mouse" raycaster="objects: a-box" fog="type: exponential; color: #000;" stats>
         <a-light type="directional" light="castShadow:true;" position="-1 1 1" intensity="2.5" shadow-camera-automatic="#objects"></a-light>
-        <a-light type="sky"></a-light>
+        <a-sky></a-sky>
 
         <a-camera id="camera" look-controls="enabled: false" wasd-controls="enabled: false"></a-camera>
         <a-assets>
             <a-asset-item id="Model" src="./house.gltf/house.glb"></a-assets-item>
+            <a-asset-item id="Scene" src="./scene.glb"></a-asset-item>    
+            <a-asset-item id="Bridge" src="./golden ratio.glb"></a-asset-item>
         </a-assets>
-        <a-box class="sphere_zpc" position="0 0 -5" color="rgb(100, 200, 0)">
+       <a-box class="sphere_zpc" position="0 0 -5" color="rgb(100, 200, 0)">
             <a-animation position="0 0 -5" attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
         </a-box>
         <a-box class="sphere_spt" position="2 3 -7" color="tomato" glow="10">
             <a-animation position="0 10 -5" attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
         </a-box>
-        <a-entity gltf-model="#Model" position="0 0 -7" rotation="0 20 0" animation-mixer></a-entity>
-        <a-plane position="0 0 -5" height="100" width="100" rotation="90 90 90" color="blue"></a-plane>
+        <a-entity gltf-model="#Scene" position="0 0 -7" rotation="0 20 0"></a-entity>
+        <a-entity gltf-model="#Bridge"></a-entity>
+        <a-plane position="0 0 -5" height="100" width="100" rotation="90 90 90" color="blue"></a-plane> 
     </a-scene>
     <script src="./script.js"></script>
     <script src="./text.js"></script>
