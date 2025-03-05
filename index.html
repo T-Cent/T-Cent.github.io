@@ -45,43 +45,16 @@
             <a-light type="ambient" intensity="1" position="1 1 10" color="#FFF"></a-light>
         <a-camera id="camera" look-controls="enabled: true" wasd-controls="enabled: true"></a-camera>
         <a-assets>
-            <a-asset-item id="House" src="./house.gltf/house.glb"></a-assets-item>
-            <a-asset-item id="Scene" src="./scene.glb"></a-asset-item>
-            <a-asset-item id="GoldenRatio" src="./golden ratio.glb"></a-asset-item>
-            <a-asset-item id="WalkingMan" src="./Walking_out/Walking.gltf"></a-asset-item>
-            <a-asset-item id="Mech" src="mech.glb"></a-asset-item>
-            <a-asset-item id="Tree1" src="tree1.glb"></a-asset-item>
-            <a-asset-item id="Tree2" src="tree2.glb"></a-asset-item>
-            <a-asset-item id="Tree3" src="tree3.glb"></a-asset-item>
-            <a-asset-item id="Cloud1" src="cloud1.glb"></a-asset-item>
-            <a-asset-item id="Cloud2" src="cloud2.glb"></a-asset-item>
-            <a-asset-item id="Rock1" src="rock1.glb"></a-asset-item>
-            <a-asset-item id="Rock2" src="rock2.glb"></a-asset-item>
-            <a-asset-item id="Rock3" src="rock3.glb"></a-asset-item>
-            <a-asset-item id="Rock4" src="rock4.glb"></a-asset-item>
-            <a-asset-item id="Road" src="road.glb"></a-asset-item>
-            <a-asset-item id="Woodv" src="wood_v.glb"></a-asset-item>
-            <a-asset-item id="Woodh1" src="wood_h.glb"></a-asset-item>
-            <a-asset-item id="woodh2" src="wood_h1.glb"></a-asset-item>
+            <a-asset-item id="House" src="/Assets/house.gltf/house.glb"></a-assets-item>
+            <a-asset-item id="WalkingMan" src="./Animations/Walking.gltf"></a-asset-item>
+            <a-asset-item id="Scene" src="/Assets/scene.glb"></a-asset-item>
             <a-asset-item id="DancingRobot" src="./Animations/robot_dancing_1_out/robot_dancing_1.gltf"></a-asset-item>
             <img id="CurrentPoster" src="./CurrentEvent.png">
         </a-assets>
         <a-box shadow class="sphere_zpc" position="0 0 -5" color="rgb(100, 200, 0)"></a-box>
         <a-box shadow class="sphere_spt" position="2 3 -7" color="tomato"></a-box>
         <!-- <a-entity gltf-model="#WalkingMan" position="0 0 -10" animation-mixer></a-entity> -->
-        <a-entity shadow gltf-model="#Tree1"></a-entity>
-        <a-entity shadow gltf-model="#Tree2"></a-entity>
-        <a-entity shadow gltf-model="#Tree3"></a-entity>
-        <!-- <a-entity gldtf-model="#Cloud1"></a-entity> -->
-        <a-entity shadow gltf-model="#Cloud2"></a-entity>
-        <a-entity shadow gltf-model="#Rock1"></a-entity>
-        <a-entity shadow gltf-model="#Rock2"></a-entity>
-        <a-entity shadow gltf-model="#Rock3"></a-entity>
-        <a-entity shadow gltf-model="#Rock4"></a-entity>
-        <a-entity shadow gltf-model="#House" position="0 0 -10"></a-entity>
-        <a-entity shadow gltf-model="#Road"></a-entity>
-        <a-entity shadow gltf-model="#Woodv"></a-entity>
-        <a-entity shadow gltf-model="#Woodh1"></a-entity>
+        <a-entity shadow gltf-model="#Scene"></a-entity>
 
         <a-entity shadow gltf-model="#DancingRobot" position="-4 0 -6" size="0.1" animation-mixer></a-entity>
 
@@ -89,8 +62,8 @@
         <a-cylinder shadow color="grey" height="5" radius="0.08" position="-4 0 -7"></a-cylinder>
         <a-plane shadow src="#CurrentPoster" position="-4 3 -6.9" height="4" width="2.828" rotation="0 20 0"></a-plane>
     </a-scene>
-    <script src="./script.js"></script>
-    <script src="./text.js"></script>
+    <script src="./Scripts/script.js"></script>
+    <script src="./Scripts/text.js"></script>
 </body>
 
 </html>
