@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Babylon.js sample code</title>
+
+        <!-- Babylon.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+        <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+        <script src="https://cdn.babylonjs.com/recast.js"></script>
+        <script src="https://cdn.babylonjs.com/ammo.js"></script>
+        <script src="https://cdn.babylonjs.com/havok/HavokPhysics_umd.js"></script>
+        <script src="https://cdn.babylonjs.com/cannon.js"></script>
+        <script src="https://cdn.babylonjs.com/Oimo.js"></script>
+        <script src="https://cdn.babylonjs.com/earcut.min.js"></script>
+        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+        <script src="https://cdn.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+        <script src="https://cdn.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+        <script src="https://cdn.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+        <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+        <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+        <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+        <script src="https://cdn.babylonjs.com/addons/babylonjs.addons.min.js"></script>
+        <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+        <style>
+            html,
+            body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+
+            #canvasZone {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="canvasZone"><canvas id="renderCanvas"></canvas></div>
+        <script>
+                    var canvas = document.getElementById("renderCanvas");
+
+                    var startRenderLoop = function (engine, canvas) {
+                        engine.runRenderLoop(function () {
+                            if (sceneToRender && sceneToRender.activeCamera) {
+                                sceneToRender.render();
+                            }
+                        });
+                    }
+
+                    var engine = null;
+        var scene = null;
+        var sceneToRender = null;
+        var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true,  disableWebGL2Support: false}); };
+        var createScene = function () {
+        	var scene = new BABYLON.Scene(engine);
+        
+        	var camera = new BABYLON.ArcRotateCamera("Camera", 3 * Math.PI / 2, Math.PI / 2.5, 50, BABYLON.Vector3.Zero(), scene);
+        
+        	camera.attachControl(canvas, true);
+        
+        	var light = new BABYLON.DirectionalLight("dir02", new BABYLON.Vector3(0.2, -1, 0), scene);
+            light.position = new BABYLON.Vector3(0, 80, 0);
+        
+            var light1 = new BABYLON.HemisphericLight("hemi", new BABYLON.Vector3(1, -1, 0), scene);
+        	
+            var shadowGenerator = new BABYLON.ShadowGenerator(2048, light);
+        
+        	var cover = new BABYLON.StandardMaterial("cover", scene);
+            cover.diffuseTexture = new BABYLON.Texture("https://upload.wikimedia.org/wikipedia/commons/2/2a/VichyKaro.png");
+            cover.backFaceCulling = false;
+        
+            var blueMat = new BABYLON.StandardMaterial("crate", scene);
+            blueMat.diffuseColor = BABYLON.Color3.Blue();
+        
+            var grass = new BABYLON.StandardMaterial("grass", scene);
+        	grass.diffuseTexture = new BABYLON.Texture("textures/grass.png");
+            grass.diffuseTexture.uScale = 10;
+            grass.diffuseTexture.vScale = 10;
+            
+            var plane = BABYLON.MeshBuilder.CreateGround("plane", {width: 25, height: 20, subdivisions: 30 }, scene);
+            plane.position.y = 5;
+            plane.material = cover;
+        
+            shadowGenerator.addShadowCaster(plane);
+        
+            scene.enablePhysics(null, new BABYLON.AmmoJSPlugin());
+        
+            plane.physicsImpostor =  new BABYLON.PhysicsImpostor(plane, BABYLON.PhysicsImpostor.ClothImpostor, { mass: 1, friction: 0.1, restitution: 0, fixedPoints:15, margin: 0.45}, scene);
+            plane.physicsImpostor.velocityIterations = 10; 
+            plane.physicsImpostor.positionIterations = 10;
+            plane.physicsImpostor.stiffness = 1;
+            
+        	var ground = BABYLON.MeshBuilder.CreateBox("ground", {width: 80, depth: 80, height:1}, scene);
+            ground.material = grass;
+            ground.receiveShadows = true;
+            ground.physicsImpostor = new BABYLON.PhysicsImpostor(ground, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0, friction: 0.5, restitution: 0 }, scene);
+        
+        
+            var box = BABYLON.MeshBuilder.CreateBox("box", {width: 5, depth: 8, height:4}, scene);
+            box.position.y = 2.5;
+            box.material = blueMat;
+            box.forceSharedVertices();
+            box.increaseVertices(5);
+            box.physicsImpostor = new BABYLON.PhysicsImpostor(box, BABYLON.PhysicsImpostor.SoftbodyImpostor, { mass: 0, friction: 0.5, restitution: 0 }, scene);
+            box.physicsImpostor.pressure =  10000;
+            box.physicsImpostor.velocityIterations = 20; 
+            box.physicsImpostor.positionIterations = 20;
+            box.physicsImpostor.stiffness = 0.8;
+        
+        	return scene;
+        };
+                window.initFunction = async function() {
+                    await Ammo();
+                    
+                    
+                    var asyncEngineCreation = async function() {
+                        try {
+                        return createDefaultEngine();
+                        } catch(e) {
+                        console.log("the available createEngine function failed. Creating the default engine instead");
+                        return createDefaultEngine();
+                        }
+                    }
+
+                    window.engine = await asyncEngineCreation();
+                    
+                    const engineOptions = window.engine.getCreationOptions?.();
+                    if (!engineOptions || engineOptions.audioEngine !== false) {
+                        
+                    }
+        if (!engine) throw 'engine should not be null.';
+        startRenderLoop(engine, canvas);
+        window.scene = createScene();};
+        initFunction().then(() => {sceneToRender = scene
+                    });
+
+                    // Resize
+                    window.addEventListener("resize", function () {
+                        engine.resize();
+                    });
+        </script>
+    </body>
+</html>
