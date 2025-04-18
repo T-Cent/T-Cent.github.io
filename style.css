@@ -20,7 +20,7 @@ html {
     z-index: 0;
 }
 
-.evariste {
+.text {
     position: relative;
     z-index: 1;
     color: rgb(192, 197, 134);
@@ -28,12 +28,12 @@ html {
     margin-top: 20px;
 }
 
-.evariste::selection {
+.text::selection {
     color: black;
     background-color: bisque;
 }
 
-.evariste:hover {
+.text:hover {
     color: rgb(57, 113, 113);
     cursor: default;
     user-select: text;

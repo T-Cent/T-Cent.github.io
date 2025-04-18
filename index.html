@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Èvariste</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0 user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Portfolio | Taraash</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="js/aframe-extras.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.0/dist/aframe-extras.min.js"></script>
 </head>
 
@@ -31,37 +33,48 @@
         <path class="path_curve" stroke="rgba(200, 200, 100, 0.6)" stroke-width="1" fill="transparent" />
     </svg>
 
-    <h1 class="evariste">Évariste</h1>
+    <h1 class="text">Hello!</h1>
 
-    <p class="evariste">
-        Évariste is our college's Mathematical and Theoretical Science club
+    <p class="text">
+        I'm Taraash, I love 3d (if you couldn't tell!), math (i'm the coordinator for Évariste), music (guess my
+        #liked_songs) and I absolutely love movies (though I haven't had time to see one in a while). You can move
+        around with WASD and look around with the mouse. Most of the stuff is clickable, so click!
     </p>
 
     <a-scene cursor="rayOrigin: mouse" raycaster="objects: a-box" fog="type: exponential; color: #000;"
-        loading-screen="enabled: false;" stats>
-        <!-- <a-light type="directional" light="castShadow:true;" position="-1 1 1" intensity="2.5"
-            shadow-camera-automatic="#objects"></a-light> -->
-            <a-light type="directional" intensity="0.9" color="#FFF" position="5 3 1" light="castShadow:true;"></a-light>
-            <a-light type="ambient" intensity="1" position="1 1 10" color="#FFF"></a-light>
-        <a-camera id="camera" look-controls="enabled: true" wasd-controls="enabled: true"></a-camera>
+        loading-screen="enabled: false;">
+
+        <a-light type="directional" intensity="0.9" color="#FFF" position="5 3 1" light="castShadow:true;"></a-light>
+        <a-light type="ambient" intensity="1" position="1 1 10" color="#FFF"></a-light>
+
+
         <a-assets>
-            <a-asset-item id="WalkingMan" src="./Animations/Walking.gltf"></a-asset-item>
-            <a-asset-item id="Scene" src="/Assets/scene.glb"></a-asset-item>
-            <a-asset-item id="DancingRobot" src="./Animations/robot_dancing_1_out/robot_dancing_1.gltf"></a-asset-item>
-            <img id="CurrentPoster" src="./CurrentEvent.png">
+            <a-asset-item id="scene" src="Assets/scene_v2.glb"></a-asset-item>
+            <img id="plane_color" src="textures/_Diffuse__0000.jpg">
+            <img id="plane_height" src="textures/_Height__0000.jpg">
+            <img id="plane_normal" src="textures/_Normal__0000.jpg">
+            <img id="plane_roughness" src="textures/_Roughness__0000.jpg">
+
+            <a-asset-item id="character" src="Assets/character_animation.glb"></a-asset-item>
         </a-assets>
-        <a-box shadow class="sphere_zpc" position="0 0 -5" color="rgb(100, 200, 0)"></a-box>
-        <a-box shadow class="sphere_spt" position="2 3 -7" color="tomato"></a-box>
-        <!-- <a-entity gltf-model="#WalkingMan" position="0 0 -10" animation-mixer></a-entity> -->
-        <a-entity shadow gltf-model="#Scene"></a-entity>
 
-        <a-entity shadow gltf-model="#DancingRobot" position="-4 0 -6" size="0.1" animation-mixer></a-entity>
+        <a-plane height="200" width="200" src="#plane_color" displacementMap="#plane_height" displacementScale="0.1"
+            displacementBias="-0.1" normalMap="#plane_normal" roughnessMap="#plane_roughness" repeat="1"
+            rotation="-90 0 0" position="0 -20 -60"></a-plane>
 
-        <a-plane shadow position="0 0 -10" height="20" width="20" rotation="-90 0 0" color="lightgreen"></a-plane>
-        <a-cylinder shadow color="grey" height="5" radius="0.08" position="-4 0 -7"></a-cylinder>
-        <a-plane shadow src="#CurrentPoster" position="-4 3 -6.9" height="4" width="2.828" rotation="0 20 0"></a-plane>
+        <a-entity gltf-model="#scene" position="0 0 -10" scale="1 1 1" rotation="0 180 0" animation-mixer></a-entity>
+
+        <a-entity id="aframe_player" gltf-model="#character" position="0 0 -10" scale="1 1 1" rotation="0 180 0"
+            animation-mixer>
+            <a-camera id="camera" look-controls="enabled: true" wasd-controls="enabled: false" position="0 1.6 10"></a-camera>
+        </a-entity>
+
+        <a-entity id="cursor" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            material="color: #FF0000; shader: flat" position="0 0 -1"></a-entity>
+
     </a-scene>
     <script src="./Scripts/script.js"></script>
+    <script src="./Scripts/animation_control.js"></script>
     <script src="./Scripts/text.js"></script>
 </body>
 

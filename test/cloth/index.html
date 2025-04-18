@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Portfolio | Taraash</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene cursor="rayOrigin: mouse" raycaster="objects: a-box" fog="type: exponential; color: #000;" loading-screen="enabled: false;">
+
+        <a-light type="directional" intensity="0.9" color="#FFF" position="5 3 1" light="castShadow:true;"></a-light>
+        <a-light type="ambient" intensity="1" position="1 1 10" color="#FFF"></a-light>
+        <a-box position="0 0 -5" rotation="0 0 0" color="#4CC3D9" shadow></a-box>
+        <a-camera id="camera" look-controls="enabled: true" wasd-controls="enabled: true">
+        <a-obj-model id="cloth" src="../../Assets/smth/material0001.obj" mtl="../../Assets/smth/material0001.mtl" position="0 0 -5" rotation="90 0 0"></a-obj-model>
+        </a-camera>
+
+    </a-scene>
+
+    <script>
+        const cloth = document.getElementById('cloth');
+        for (let i = 1; i < 100; i++) {
+            // const clone = cloth.cloneNode(true);
+            // clone.setAttribute('position', `${Math.random() * 10 - 5} ${Math.random() * 10 - 5} ${Math.random() * 10 - 5}`);
+            // clone.setAttribute('scale', `${Math.random() * 2 + 0.5} ${Math.random() * 2 + 0.5} ${Math.random() * 2 + 0.5}`);
+            // document.querySelector('a-scene').appendChild(clone);
+
+            setTimeout(() => {
+                cloth.setAttribute('src', `../../Assets/smth/material${i.toString().padStart(4, '0')}.obj`);
+                cloth.setAttribute('mtl', `../../Assets/smth/material${i.toString().padStart(4, '0')}.mtl`);
+            }, i * 1/24); // Delay each clone by 1 second
+        }
+    </script>
+</body>
+
+</html>
