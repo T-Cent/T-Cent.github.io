@@ -44,29 +44,47 @@
     <a-scene cursor="rayOrigin: mouse" raycaster="objects: a-box" fog="type: exponential; color: #000;"
         loading-screen="enabled: false;">
 
-        <a-light type="directional" intensity="0.9" color="#FFF" position="5 3 1" light="castShadow:true;"></a-light>
+        <a-light type="directional" intensity="2" color="#FFF" position="0 10 10" rotation="30 30 -45" light="castShadow:true;"></a-light>
         <a-light type="ambient" intensity="1" position="1 1 10" color="#FFF"></a-light>
 
 
         <a-assets>
-            <a-asset-item id="scene" src="Assets/scene_v2.glb"></a-asset-item>
+            <a-asset-item id="scene" src="Blend files/scene_v4.glb"></a-asset-item>
             <img id="plane_color" src="textures/_Diffuse__0000.jpg">
             <img id="plane_height" src="textures/_Height__0000.jpg">
             <img id="plane_normal" src="textures/_Normal__0000.jpg">
             <img id="plane_roughness" src="textures/_Roughness__0000.jpg">
 
             <a-asset-item id="character" src="Assets/character_animation.glb"></a-asset-item>
+
+            <a-asset-item id="building" src="Assets/City Pack.undefined-glb/Big Building.glb"></a-asset-item>
+
+            <a-cubemap id="hdr">
+                <img src="Assets/Standard-Cube-Map/px.png">
+                <img src="Assets/Standard-Cube-Map/nx.png">
+                <img src="Assets/Standard-Cube-Map/py.png">
+                <img src="Assets/Standard-Cube-Map/ny.png">
+                <img src="Assets/Standard-Cube-Map/pz.png">
+                <img src="Assets/Standard-Cube-Map/nz.png">
+            </a-cubemap>
         </a-assets>
+
+        <a-light type="probe" envMap="#hdr"></a-light>
 
         <a-plane height="200" width="200" src="#plane_color" displacementMap="#plane_height" displacementScale="0.1"
             displacementBias="-0.1" normalMap="#plane_normal" roughnessMap="#plane_roughness" repeat="1"
             rotation="-90 0 0" position="0 -20 -60"></a-plane>
+            
+            <a-entity shadow gltf-model="#scene" position="0 0 -10" scale="1 1 1" rotation="0 180 0"
+            animation-mixer></a-entity>
 
-        <a-entity gltf-model="#scene" position="0 0 -10" scale="1 1 1" rotation="0 180 0" animation-mixer></a-entity>
+        <a-entity shadow gltf-model="#building" position="0 0 -10" scale="1 1 1" rotation="0 180 0"></a-entity>
+        <a-box shadow position="0 0 -10" scale="1 1 1" rotation="0 180 0"></a-entity>
 
-        <a-entity id="aframe_player" gltf-model="#character" position="0 0 -10" scale="1 1 1" rotation="0 180 0"
+        <a-camera id="camera" look-controls="enabled: true" wasd-controls="enabled: false" position="0 1.6 2"
+            rotation="0 0 0"></a-camera>
+        <a-entity shadow id="aframe_player" gltf-model="#character" position="0 0 -10" scale="1 1 1" rotation="0 0 0"
             animation-mixer>
-            <a-camera id="camera" look-controls="enabled: true" wasd-controls="enabled: false" position="0 1.6 10"></a-camera>
         </a-entity>
 
         <a-entity id="cursor" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"

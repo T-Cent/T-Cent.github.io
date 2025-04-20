@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0 user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Portfolio | Taraash</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="../../js/aframe-extras.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.0/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+
+    <a-scene cursor="rayOrigin: mouse" raycaster="objects: a-box" fog="type: exponential; color: #000;"
+        loading-screen="enabled: false;">
+
+        <!-- <a-light type="directional" intensity="2" color="#FFF" position="5 3 1" rotation="0 0 -90" light="castShadow:true;"></a-light> -->
+        <!-- <a-light type="ambient" intensity="1" position="1 1 10" color="#FFF"></a-light> -->
+
+
+        <a-assets>
+
+            <a-asset-item id="character" src="../../Assets/character_animation.glb"></a-asset-item>
+
+        </a-assets>
+
+        <a-entity shadow id="aframe_player" gltf-model="#character" position="0 0 -10" scale="1 1 1" rotation="0 0 0"
+            animation-mixer>
+        </a-entity>
+
+    </a-scene>
+    <script src="script.js"></script>
+</body>
+
+</html>
