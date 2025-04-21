@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +13,14 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background-color: #0a192f;
             color: #e6f1ff;
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -27,7 +28,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         /* Particle Background */
         #particles-js {
             position: fixed;
@@ -37,21 +38,21 @@
             left: 0;
             z-index: 1;
         }
-        
+
         /* Header Styles */
         header {
             padding: 100px 0 60px;
             position: relative;
             overflow: hidden;
         }
-        
+
         .header-content {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
         }
-        
+
         .profile-img {
             width: 180px;
             height: 180px;
@@ -62,26 +63,26 @@
             box-shadow: 0 8px 20px rgba(100, 255, 218, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .profile-img:hover {
             transform: scale(1.05);
             box-shadow: 0 12px 30px rgba(100, 255, 218, 0.5);
         }
-        
+
         .name {
             font-size: 2.5rem;
             margin-bottom: 10px;
             font-weight: 700;
             color: #ccd6f6;
         }
-        
+
         .title {
             font-size: 1.3rem;
             margin-bottom: 20px;
             opacity: 0.9;
             color: #8892b0;
         }
-        
+
         /* Navigation */
         nav {
             background-color: rgba(10, 25, 47, 0.95);
@@ -91,17 +92,17 @@
             z-index: 100;
             backdrop-filter: blur(10px);
         }
-        
+
         .nav-container {
             display: flex;
             justify-content: center;
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
         }
-        
+
         .nav-links li a {
             display: block;
             padding: 20px;
@@ -111,7 +112,7 @@
             transition: all 0.3s ease;
             position: relative;
         }
-        
+
         .nav-links li a::after {
             content: '';
             position: absolute;
@@ -123,21 +124,21 @@
             transition: all 0.3s ease;
             transform: translateX(-50%);
         }
-        
+
         .nav-links li a:hover {
             color: #64ffda;
         }
-        
+
         .nav-links li a:hover::after {
             width: 50%;
         }
-        
+
         /* Section Styles */
         section {
             padding: 80px 0;
             position: relative;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 50px;
@@ -145,7 +146,7 @@
             color: #ccd6f6;
             position: relative;
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -156,23 +157,23 @@
             height: 3px;
             background-color: #64ffda;
         }
-        
+
         /* About Section */
         .about-content {
             display: flex;
             gap: 40px;
             align-items: center;
         }
-        
+
         .about-text {
             flex: 1;
             color: #8892b0;
         }
-        
+
         .about-text p {
             margin-bottom: 15px;
         }
-        
+
         .about-img {
             flex: 1;
             border-radius: 10px;
@@ -180,29 +181,29 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .about-img:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 35px rgba(100, 255, 218, 0.2);
         }
-        
+
         .about-img img {
             width: 100%;
             height: auto;
             display: block;
         }
-        
+
         /* Skills Section */
         .skills-bg {
             background-color: rgba(16, 33, 65, 0.4);
         }
-        
+
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
-        
+
         .skill-card {
             background-color: rgba(23, 42, 69, 0.7);
             padding: 30px;
@@ -212,30 +213,30 @@
             border: 1px solid rgba(100, 255, 218, 0.1);
             backdrop-filter: blur(5px);
         }
-        
+
         .skill-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             border-color: rgba(100, 255, 218, 0.3);
         }
-        
+
         .skill-title {
             font-size: 1.2rem;
             margin-bottom: 15px;
             color: #64ffda;
         }
-        
+
         .skill-list {
             list-style: none;
             color: #8892b0;
         }
-        
+
         .skill-list li {
             margin-bottom: 10px;
             display: flex;
             align-items: center;
         }
-        
+
         .skill-list li::before {
             content: '▹';
             color: #64ffda;
@@ -244,14 +245,14 @@
             width: 1em;
             margin-right: 5px;
         }
-        
+
         /* Experience Section */
         .experience-timeline {
             position: relative;
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .experience-timeline::before {
             content: '';
             position: absolute;
@@ -262,16 +263,16 @@
             background-color: rgba(100, 255, 218, 0.3);
             transform: translateX(-50%);
         }
-        
+
         .timeline-item {
             position: relative;
             margin-bottom: 60px;
         }
-        
+
         .timeline-item:last-child {
             margin-bottom: 0;
         }
-        
+
         .timeline-content {
             position: relative;
             width: calc(50% - 30px);
@@ -283,17 +284,17 @@
             backdrop-filter: blur(5px);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .timeline-content:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             border-color: rgba(100, 255, 218, 0.3);
         }
-        
+
         .timeline-item:nth-child(odd) .timeline-content {
             margin-left: auto;
         }
-        
+
         .timeline-item:nth-child(odd) .timeline-content::before {
             content: '';
             position: absolute;
@@ -305,7 +306,7 @@
             border-radius: 50%;
             box-shadow: 0 0 0 5px rgba(100, 255, 218, 0.2);
         }
-        
+
         .timeline-item:nth-child(even) .timeline-content::before {
             content: '';
             position: absolute;
@@ -317,30 +318,30 @@
             border-radius: 50%;
             box-shadow: 0 0 0 5px rgba(100, 255, 218, 0.2);
         }
-        
+
         .timeline-date {
             font-size: 0.9rem;
             color: #64ffda;
             margin-bottom: 10px;
         }
-        
+
         .timeline-title {
             font-size: 1.2rem;
             margin-bottom: 5px;
             color: #ccd6f6;
         }
-        
+
         .timeline-company {
             font-size: 1rem;
             font-weight: 500;
             margin-bottom: 15px;
             color: #8892b0;
         }
-        
+
         .timeline-content p:last-child {
             color: #8892b0;
         }
-        
+
         /* Contact Section */
         .contact-form {
             max-width: 600px;
@@ -352,18 +353,18 @@
             border: 1px solid rgba(100, 255, 218, 0.1);
             backdrop-filter: blur(5px);
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         label {
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
             color: #ccd6f6;
         }
-        
+
         input,
         textarea {
             width: 100%;
@@ -375,19 +376,19 @@
             color: #ccd6f6;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         input:focus,
         textarea:focus {
             outline: none;
             border-color: #64ffda;
             box-shadow: 0 0 8px rgba(100, 255, 218, 0.3);
         }
-        
+
         textarea {
             min-height: 150px;
             resize: vertical;
         }
-        
+
         button {
             background-color: transparent;
             color: #64ffda;
@@ -398,12 +399,161 @@
             cursor: pointer;
             transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
         }
-        
+
         button:hover {
             background-color: rgba(100, 255, 218, 0.1);
             transform: translateY(-3px);
         }
-        
+
+        /* Projects Section Styles */
+        #projects {
+            background-color: rgba(16, 33, 65, 0.4);
+            padding: 80px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background-color: rgba(23, 42, 69, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            backdrop-filter: blur(5px);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(100, 255, 218, 0.3);
+        }
+
+        .project-img {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-img img {
+            transform: scale(1.05);
+        }
+
+        .project-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(10, 25, 47, 0), rgba(10, 25, 47, 0.8));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-img::after {
+            opacity: 1;
+        }
+
+        .project-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #ccd6f6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .project-tags span {
+            background-color: rgba(100, 255, 218, 0.1);
+            color: #64ffda;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-tags span:hover {
+            background-color: rgba(100, 255, 218, 0.2);
+        }
+
+        .project-description {
+            color: #8892b0;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .project-link {
+            color: #64ffda;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #a6ffea;
+            transform: translateY(-2px);
+        }
+
+        .project-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-link:hover::after {
+            transform: translateX(3px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-img {
+                height: 180px;
+            }
+        }
+
         /* Footer */
         footer {
             background-color: rgba(10, 20, 39, 0.8);
@@ -413,14 +563,14 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
             list-style: none;
             margin-bottom: 20px;
         }
-        
+
         .social-links li a {
             display: block;
             margin: 0 15px;
@@ -428,17 +578,17 @@
             font-size: 1.2rem;
             transition: color 0.3s ease, transform 0.3s ease;
         }
-        
+
         .social-links li a:hover {
             color: #64ffda;
             transform: translateY(-3px);
         }
-        
+
         .copyright {
             font-size: 0.9rem;
             opacity: 0.8;
         }
-        
+
         /* Floating Elements Animation */
         .floating-tech {
             position: absolute;
@@ -448,12 +598,12 @@
             font-family: monospace;
             pointer-events: none;
         }
-        
+
         /* Glowing effect */
         .glow {
             text-shadow: 0 0 10px #64ffda, 0 0 20px #64ffda, 0 0 30px #64ffda;
         }
-        
+
         /* Mouse trailer effect */
         .cursor-trailer {
             position: fixed;
@@ -467,71 +617,73 @@
             z-index: 9999;
             opacity: 0.7;
         }
-        
+
         /* Responsive Styles */
         @media (max-width: 768px) {
             .about-content {
                 flex-direction: column;
             }
-            
+
             .about-img {
                 margin-top: 30px;
                 order: -1;
             }
-            
+
             .experience-timeline::before {
                 left: 20px;
             }
-            
+
             .timeline-content {
                 width: calc(100% - 50px);
                 margin-left: 50px !important;
             }
-            
+
             .timeline-item:nth-child(odd) .timeline-content::before,
             .timeline-item:nth-child(even) .timeline-content::before {
                 left: -40px;
                 right: auto;
             }
-            
+
             .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
+
             .nav-links li a {
                 padding: 15px 10px;
                 font-size: 0.9rem;
             }
-            
+
             .name {
                 font-size: 2rem;
             }
-            
+
             .title {
                 font-size: 1.1rem;
             }
-            
+
             .cursor-trailer {
-                display: none; /* Hide cursor trailer on mobile */
+                display: none;
+                /* Hide cursor trailer on mobile */
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Particle Background -->
     <div id="particles-js"></div>
-    
+
     <!-- Cursor Trailer -->
     <div class="cursor-trailer"></div>
-    
+
     <!-- Floating Tech Elements -->
     <div class="floating-tech" style="top: 15%; left: 5%; font-size: 24px;">{ }</div>
     <div class="floating-tech" style="top: 30%; right: 10%; font-size: 32px;">&lt;/&gt;</div>
     <div class="floating-tech" style="bottom: 20%; left: 15%; font-size: 28px;">/* */</div>
     <div class="floating-tech" style="top: 60%; right: 5%; font-size: 22px;">function()</div>
     <div class="floating-tech" style="bottom: 40%; left: 30%; font-size: 30px;">#</div>
-    
+
     <!-- Header Section -->
     <header>
         <div class="container header-content">
@@ -539,7 +691,7 @@
             <p class="title">Me in 2D</p>
         </div>
     </header>
-    
+
     <!-- Navigation -->
     <nav>
         <div class="container nav-container">
@@ -547,18 +699,20 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
-    
+
     <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello, so a little about me, I love watching movies, and math. I also work in 3D (you could've guessed this one) because I enjoy it!</p>
+                    <p>Hello, so a little about me, I love watching movies, and math. I also work in 3D (you could've
+                        guessed this one) because I enjoy it!</p>
                     <p>I also love listening to (primarily folk) music (guess my number of liked songs).</p>
                     <p>I love astronomy!! Still waiting for T CrB to explode.</p>
                 </div>
@@ -568,7 +722,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Skills Section -->
     <section id="skills" class="skills-bg">
         <div class="container">
@@ -585,7 +739,7 @@
                         <li>Bash</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-card">
                     <h3 class="skill-title">3D stuff</h3>
                     <ul class="skill-list">
@@ -596,7 +750,7 @@
                         <li>Premier Pro/After Effects/Photoshop</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-card">
                     <h3 class="skill-title">Other cool stuff</h3>
                     <ul class="skill-list">
@@ -608,7 +762,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Experience Section -->
     <section id="experience">
         <div class="container">
@@ -619,19 +773,21 @@
                         <p class="timeline-date">2024 - Present</p>
                         <h3 class="timeline-title">Head</h3>
                         <p class="timeline-company">Évariste</p>
-                        <p>I'm the head of Évariste, which is our college's math club. Also one of the reason I wasn't able to fulfill my vision for this website, search Integral Cup to see what I mean!</p>
+                        <p>I'm the head of Évariste, which is our college's math club. Also one of the reason I wasn't
+                            able to fulfill my vision for this website, search Integral Cup to see what I mean!</p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <p class="timeline-date">2025 - Present</p>
                         <h3 class="timeline-title">Member</h3>
                         <p class="timeline-company">IGDA Student Chapter</p>
-                        <p>I'm the soon to be coordinator of IIIT-D's new student chapter of IGDA, which is the International Game Developers Association, so that's fun</p>
+                        <p>I'm the soon to be coordinator of IIIT-D's new student chapter of IGDA, which is the
+                            International Game Developers Association, so that's fun</p>
                     </div>
                 </div>
-                
+
                 <!-- <div class="timeline-item">
                     <div class="timeline-content">
                         <p class="timeline-date">2018 - 2020</p>
@@ -643,7 +799,122 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <!-- <div class="project-img">
+                        <img src="/api/placeholder/500/300" alt="Project 1">
+                    </div> -->
+                    <div class="project-content">
+                        <h3 class="project-title">Image Classifier</h3>
+                        <div class="project-tags">
+                            <span>CoLab</span>
+                            <span>PyTorch</span>
+                            <span>Image Augmentation</span>
+                        </div>
+                        <p class="project-description">Created a multi-class image classifier to distinguish between good, noise, blurry, over/underexposed images with around 98% accuracy. Later created a python script that could be run on anyone's computer as a mass validation test of the model's capabilities.</p>
+                        <div class="project-links">
+                            <!-- <a href="#" class="project-link">Live Demo</a> -->
+                            <a href="https://github.com/T-Cent/Culling" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/emerge.jpg" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Emerge | Pwnisher</h3>
+                        <div class="project-tags">
+                            <span>Blender</span>
+                            <span>Firebase</span>
+                        </div>
+                        <p class="project-description">Partook in multiple weekly challenges conducted by Pwnisher (a respected figure in the 3D domain), this was my submission for Emerge</p>
+                        <div class="project-links">
+                            <!-- <a href="#" class="project-link">Live Demo</a> -->
+                            <!-- <a href="#" class="project-link">GitHub</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/tension.png" alt="Project 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Tension | Pwnisher</h3>
+                        <div class="project-tags">
+                            <span>Blender</span>
+                            <span>Photoshop</span>
+                        </div>
+                        <p class="project-description">Same as above, this one was for Tension, I later created an animation for this, which will soon be uploaded on my ArtStation.</p>
+                        <div class="project-links">
+                            <a href="https://www.artstation.com/taraash" class="project-link">ArtStation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/ctf.png" alt="Project 4">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Capture the Flag</h3>
+                        <div class="project-tags">
+                            <span>Linux</span>
+                            <span>Bash</span>
+                        </div>
+                        <p class="project-description">Hosted multiple consecutive capture the flag events with more than 20 submissions as an alternative to our (Évariste's) problem of the week campaign (which also saw incredible response!)</p>
+                        <div class="project-links">
+                            <a href="https://evariste-club.github.io" class="project-link">Website</a>
+                            <a href="https://www.instagram.com/evariste.iiitd/" class="project-link">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/unreal.jpg" alt="Project 5">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Technical Demos</h3>
+                        <div class="project-tags">
+                            <span>Unreal Engine</span>
+                            <span>Niagara | UnrealEngine</span>
+                        </div>
+                        <p class="project-description">As part of the IGDA IIIT D student chapter, created multiple proof of concepts and technical demos. These include a fully customized MetaHuman (groom, head, body) and integrating materials and Niagara particles via Blueprints.</p>
+                        <div class="project-links">
+                            <a href="https://evariste-club.github.io" class="project-link">Website</a>
+                            <a href="https://www.instagram.com/evariste.iiitd/" class="project-link">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <!-- <div class="project-img">
+                        <img src="/images/tension.png" alt="Project 3">
+                    </div> -->
+                    <div class="project-content">
+                        <h3 class="project-title">College Stuff</h3>
+                        <div class="project-tags">
+                            <span>C/C++</span>
+                            <span>LibGDX | Java</span>
+                        </div>
+                        <p class="project-description">Created multiple projects as college assignments, these are similar to what others have mentioned, so I'll skip those</p>
+                        <!-- <div class="project-links">
+                            <a href="https://www.artstation.com/taraash" class="project-link">ArtStation</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="skills-bg">
         <div class="container">
@@ -671,7 +942,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -681,7 +952,7 @@
             </ul>
         </div>
     </footer>
-    
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script>
@@ -791,104 +1062,105 @@
             },
             "retina_detect": true
         });
-        
+
         // Cursor trailer effect
         const cursorTrailer = document.querySelector('.cursor-trailer');
-        
-        document.addEventListener('mousemove', function(e) {
+
+        document.addEventListener('mousemove', function (e) {
             // Update cursor trailer position
             cursorTrailer.style.left = e.clientX + 'px';
             cursorTrailer.style.top = e.clientY + 'px';
         });
-        
+
         // Enhance cursor trailer when hovering over interactive elements
         const interactiveElements = document.querySelectorAll('a, button, input, textarea, .skill-card, .timeline-content, .about-img, .profile-img');
-        
+
         interactiveElements.forEach(element => {
-            element.addEventListener('mouseenter', function() {
+            element.addEventListener('mouseenter', function () {
                 cursorTrailer.style.width = '50px';
                 cursorTrailer.style.height = '50px';
                 cursorTrailer.style.border = '2px solid rgba(100, 255, 218, 0.5)';
                 cursorTrailer.style.backgroundColor = 'rgba(100, 255, 218, 0.1)';
             });
-            
-            element.addEventListener('mouseleave', function() {
+
+            element.addEventListener('mouseleave', function () {
                 cursorTrailer.style.width = '20px';
                 cursorTrailer.style.height = '20px';
                 cursorTrailer.style.border = '2px solid #64ffda';
                 cursorTrailer.style.backgroundColor = 'transparent';
             });
         });
-        
+
         // Animate floating tech elements
         const floatingElements = document.querySelectorAll('.floating-tech');
-        
+
         floatingElements.forEach(element => {
             // Set random initial position
             const startX = parseFloat(element.style.left) || 0;
             const startY = parseFloat(element.style.top) || 0;
-            
+
             // Animate floating effect
             animateFloating(element, startX, startY);
         });
-        
+
         function animateFloating(element, startX, startY) {
             const speed = 0.5 + Math.random() * 1.5;
             const xRange = 3 + Math.random() * 5;
             const yRange = 3 + Math.random() * 5;
             let angle = Math.random() * Math.PI * 2;
-            
+
             function updatePosition() {
                 angle += 0.01 * speed;
-                
+
                 const x = startX + Math.sin(angle) * xRange;
                 const y = startY + Math.cos(angle) * yRange;
-                
+
                 if (element.style.left) {
                     element.style.left = x + '%';
                 } else if (element.style.right) {
                     element.style.right = x + '%';
                 }
-                
+
                 if (element.style.top) {
                     element.style.top = y + '%';
                 } else if (element.style.bottom) {
                     element.style.bottom = y + '%';
                 }
-                
+
                 requestAnimationFrame(updatePosition);
             }
-            
+
             requestAnimationFrame(updatePosition);
         }
-        
+
         // Reveal animations on scroll
         const revealElements = document.querySelectorAll('.skill-card, .timeline-content, .about-img, .section-title');
-        
+
         function revealOnScroll() {
             const windowHeight = window.innerHeight;
-            
+
             revealElements.forEach(element => {
                 const elementPos = element.getBoundingClientRect().top;
                 const elementVisible = 150;
-                
+
                 if (elementPos < windowHeight - elementVisible) {
                     element.style.opacity = "1";
                     element.style.transform = "translateY(0)";
                 }
             });
         }
-        
+
         // Add initial styles for animation
         revealElements.forEach(element => {
             element.style.opacity = "0";
             element.style.transform = "translateY(20px)";
             element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
         });
-        
+
         // Check for elements in view on load and scroll
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
     </script>
 </body>
+
 </html>
