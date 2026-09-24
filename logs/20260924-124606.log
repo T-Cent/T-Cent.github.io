@@ -1,0 +1,50 @@
+INFO    : Building target web
+INFO    : XSL conversion of C:\Users\Taraash\Documents\Website\source\main.ptx by C:\Users\Taraash\.ptx\2.53.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : successful application of C:\Users\Taraash\.ptx\2.53.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : discovering source file's directory name: C:\Users\Taraash\Documents\Website\source
+INFO    : verifying and expanding input directory: C:\Users\Taraash\Documents\Website\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\Taraash\Documents\Website\assets
+INFO    : Generating any needed assets.
+WARNING : Now generating latex images
+INFO    : converting latex-image pictures from C:\Users\Taraash\Documents\Website\source\main.ptx to svg graphics for placement in C:\Users\Taraash\Documents\Website\generated-assets\latex-image
+INFO    : extracting latex-image pictures from C:\Users\Taraash\Documents\Website\source\main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'cli.version': '2.53', 'publisher': 'C:/Users/Taraash/Documents/Website/publication/publication.ptx'}
+INFO    : discovering source file's directory name: C:\Users\Taraash\Documents\Website\source
+INFO    : verifying and expanding input directory: C:\Users\Taraash\Documents\Website\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\Taraash\Documents\Website\assets
+INFO    : discovering source file's directory name: C:\Users\Taraash\Documents\Website\source
+INFO    : XSL conversion of C:\Users\Taraash\Documents\Website\source\main.ptx by C:\Users\Taraash\.ptx\2.53.0\core\xsl\extract-latex-image.xsl
+INFO    : successful application of C:\Users\Taraash\.ptx\2.53.0\core\xsl\extract-latex-image.xsl
+INFO    : converting tikz-example-diagram.tex to tikz-example-diagram.pdf
+INFO    : cropping tikz-example-diagram.pdf to cropped-tikz-example-diagram.pdf
+INFO    : renaming cropped-tikz-example-diagram.pdf to tikz-example-diagram.pdf
+INFO    : converting tikz-example-diagram.pdf to tikz-example-diagram.svg
+INFO    : Removing temporary directory C:\Users\Taraash\AppData\Local\Temp\ptx-ol0zngtm
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into C:\Users\Taraash\Documents\Website\output\web.
+INFO    : discovering source file's directory name: C:\Users\Taraash\Documents\Website\source
+INFO    : verifying and expanding input directory: C:\Users\Taraash\Documents\Website\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\Taraash\Documents\Website\assets
+INFO    : discovering source file's directory name: C:\Users\Taraash\Documents\Website\source
+INFO    : XSL conversion of C:\Users\Taraash\Documents\Website\source\main.ptx by C:\Users\Taraash\.ptx\2.53.0\core\xsl\utilities\report-publisher-variables.xsl
+INFO    : successful application of C:\Users\Taraash\.ptx\2.53.0\core\xsl\utilities\report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 8.3.0
+INFO    : Downloading Runestone Services, version 8.3.0
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-default-modern
+INFO    : converting C:\Users\Taraash\Documents\Website\source\main.ptx to HTML in C:\Users\Taraash\AppData\Local\Temp\ptx-6ny61gyz
+INFO    : XSL conversion of C:\Users\Taraash\Documents\Website\source\main.ptx by C:\Users\Taraash\.ptx\2.53.0\core\xsl\pretext-html.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of C:\Users\Taraash\.ptx\2.53.0\core\xsl\pretext-html.xsl
+INFO    : Removing temporary directory C:\Users\Taraash\AppData\Local\Temp\ptx-6ny61gyz
+INFO    : Removing temporary directory C:\Users\Taraash\AppData\Local\Temp\ptx-sbgxo0w3
+INFO    : 
+Finished build for target web. Run `pretext view web` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 
