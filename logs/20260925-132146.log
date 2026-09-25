@@ -1,0 +1,47 @@
+INFO    : Building target web
+INFO    : XSL conversion of C:\Users\Taraash\Documents\Website\source\main.ptx by C:\Users\Taraash\.ptx\2.53.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : successful application of C:\Users\Taraash\.ptx\2.53.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : discovering source file's directory name: C:\Users\Taraash\Documents\Website\source
+INFO    : verifying and expanding input directory: C:\Users\Taraash\Documents\Website\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\Taraash\Documents\Website\assets
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into C:\Users\Taraash\Documents\Website\output\web.
+INFO    : discovering source file's directory name: C:\Users\Taraash\Documents\Website\source
+INFO    : verifying and expanding input directory: C:\Users\Taraash\Documents\Website\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\Taraash\Documents\Website\assets
+INFO    : discovering source file's directory name: C:\Users\Taraash\Documents\Website\source
+INFO    : XSL conversion of C:\Users\Taraash\Documents\Website\source\main.ptx by C:\Users\Taraash\.ptx\2.53.0\core\xsl\utilities\report-publisher-variables.xsl
+INFO    : successful application of C:\Users\Taraash\.ptx\2.53.0\core\xsl\utilities\report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 8.3.1
+INFO    : Downloading Runestone Services, version 8.3.1
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-default-modern
+INFO    : converting C:\Users\Taraash\Documents\Website\source\main.ptx to HTML in C:\Users\Taraash\AppData\Local\Temp\ptx-3yj1y3ac
+INFO    : XSL conversion of C:\Users\Taraash\Documents\Website\source\main.ptx by C:\Users\Taraash\.ptx\2.53.0\core\xsl\pretext-html.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:WARNING: In a section containing subsections, any content that is not inside a subsection needs to be inside an <introduction> and/or  <conclusion>.
+INFO    : *              located at: pretext/article/section
+INFO    : *              located within: "mathematics" (xml:id), "Mathematics" (title)
+WARNING : * PTX:WARNING: In a subsection containing subsubsections, any content that is not inside a subsubsection needs to be inside an <introduction> and/or  <conclusion>.
+INFO    : *              located at: pretext/article/section/subsection
+INFO    : *              located within: "stemvibe" (xml:id), "STEMvibe Research" (title)
+WARNING : * PTX:WARNING:   a <tabular> has at least one paragraph (<p>) inside a <cell>, yet there are no <col> elements with a @width attribute.  Default widths will be supplied.
+INFO    : *              located at: pretext/article/section/subsection/subsubsection/sidebyside/table/tabular
+INFO    : *              located within: "tab_hints" (xml:id), "
+            Inference-time ablation of CGM annotations on the CGM gold problems
+            (N=55) using GPT-oss-20B.
+          " (title)
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of C:\Users\Taraash\.ptx\2.53.0\core\xsl\pretext-html.xsl
+INFO    : Removing temporary directory C:\Users\Taraash\AppData\Local\Temp\ptx-3yj1y3ac
+INFO    : Removing temporary directory C:\Users\Taraash\AppData\Local\Temp\ptx-s4k0zisa
+INFO    : 
+Finished build for target web. Run `pretext view web` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

@@ -1,22 +1,41 @@
 <?xml version='1.0' encoding='utf-8'?>
-<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
 
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
   <docinfo>
     <directories external="../assets"/>
     <document-id>taraash-mittal-portfolio</document-id>
-
-    <macros>\newcommand{\foo}{b^{ar}}</macros>
     <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
   </docinfo>
 
   <article xml:id="portfolio">
     <title>My Portfolio</title>
 
-    <xi:include href="./frontmatter.ptx" />
-    
-    <xi:include href="./introduction.ptx" />
-    <xi:include href="./section-1.ptx" />
-    <xi:include href="./section-2.ptx" />
-  </article>
+    <frontmatter>
+      <bibinfo>
+        <author>
+          <personname>Taraash Mittal</personname>
+        </author>
+      </bibinfo>
+    </frontmatter>
 
+    <introduction>
+      <p>
+        The aim of this website is to be a place for all my work.
+        It is possible that I occasional forget adding something that I've done
+        here.
+      </p>
+
+      <p>
+        Thank you to <pretext/> for the incredible software and Kiran Kedlaya
+        for introducing me to it.
+      </p>
+
+      <p>
+        An older version of my attempt at a portfolio website is <url href="./3D/index.html">here</url>. These were the times when I was working a lot with <c>A-Frame</c> and more 3D website stuff. (As a result, it is severely underdeveloped, but cool nonetheless because it was not AI-slopped together.)
+      </p>
+    </introduction>
+
+    <xi:include href="./section-research.ptx"/>
+    <xi:include href="./section-mathematics.ptx"/>
+  </article>
 </pretext>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<section xml:id="research" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Research</title>
+
+  <introduction>
+    <p>
+      Some publications and current work-in-progress.
+    </p>
+  </introduction>
+
+  <subsection xml:id="texsketch">
+    <title>AI4VA @ ECCV 2026: TexSketch</title>
+
+    <p>
+      TexSketch: Bringing Texture-Aware Colorization to Sketches was work done
+      under the Graphics Research Group in IIIT Delhi which was accepted at the
+      AI 4 Visual Arts workshop at the European Conference on Computer Vision,
+      with <em>oral spotlight</em>.
+    </p>
+
+    <figure>
+      <caption>Our pipeline</caption>
+      <image source="pipeline.png" width="100%">
+        <description>
+          <p>
+            Our pipeline describing the workflow
+          </p>
+        </description>
+      </image>
+    </figure>
+
+    <p>
+      I came up with a new method to color black-and-white sketches and be able
+      to get programmable art styles using the Open Shading Language.
+      Some pretty pictures:
+    </p>
+
+    <sidebyside margins="auto" valign="middle">
+      <figure>
+        <caption>Input sketch: fish</caption>
+        <image source="n01440764_sketch_15.jpg">
+          <description>
+            <p>
+              Fish diagram
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <figure>
+        <caption>Basic shading</caption>
+        <image source="base_n01440764_sketch_15.png">
+          <description>
+            <p>
+              Basic coloring using our method
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <figure>
+        <caption>Cel shading</caption>
+        <image source="anime_sketches_n01440764_sketch_15.png">
+          <description>
+            <p>
+              Specialized cel-shading/anime style coloring
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <figure>
+        <caption>Watercolor</caption>
+        <image source="watercolor_sketches_n01440764_sketch_15.png">
+          <description>
+            <p>
+              Specialized watercolor style coloring
+            </p>
+          </description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <sidebyside margins="auto" valign="middle">
+      <figure>
+        <caption>Input sketch: grapes</caption>
+        <image source="grapes_7441.png">
+          <description>
+            <p>
+              Grapes
+            </p>
+          </description>
+        </image>
+      </figure>
+
+
+      <figure>
+        <caption>Cel shading</caption>
+        <image source="anime_sketches_grapes_7441.png">
+          <description>
+            <p>
+              Specialized cel-shading/anime style coloring
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <figure>
+        <caption>Watercolor</caption>
+        <image source="watercolor_sketches_grapes_7441.png">
+          <description>
+            <p>
+              Specialized watercolor style coloring
+            </p>
+          </description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      The developed method is completely autonomous - just an input sketch is
+      provided, no additional color hints or segments are required.
+      We do that automatically.
+      Color pallette hints may be produced in the prompt given to the vision
+      model, if required.
+    </p>
+
+    <p>
+      Relevant links:
+      <dl>
+        <li>
+          <title>Website</title>
+
+          <p>
+            <url href="https://graphics-research-group.github.io/TexSketch/"/>
+          </p>
+        </li>
+
+        <li>
+          <title>GitHub</title>
+
+          <p>
+            <url href="https://github.com/graphics-research-group/TexSketch"/>
+          </p>
+        </li>
+
+        <li>
+          <title>Paper</title>
+
+          <p>
+            <url href="https://arxiv.org/abs/2607.24261"/>
+          </p>
+        </li>
+
+        <li>
+          <title>Graphics Research Group, IIIT Delhi</title>
+
+          <p>
+            <url href="https://graphics.iiitd.edu.in/"/>
+          </p>
+        </li>
+      </dl>
+    </p>
+  </subsection>
+
+  <subsection xml:id="stemvibe">
+    <title>STEMvibe Research</title>
+
+    <p>
+      Formed and currently lead the research department of STEMvibe.
+    </p>
+
+    <subsubsection xml:id="cgm">
+      <title>ContrastGuidedMath</title>
+
+      <p>
+        Working on ContrastGuidedMath (CGM), a competition dataset with
+        pedagogical reasoning and understanding the effects of structured
+        reasoning on large language models.
+      </p>
+
+      <p>
+        Currently under review at the MATH-AI workshop in NeurIPS, where I also
+        served as a reciprocal reviewer.
+      </p>
+
+      <p>
+        This work was inspired by the third progress prize of the AIMO on Kaggle, funded by XTX Markets.
+      </p>
+
+      <table xml:id="tab_annotation">
+        <title>
+          Annotation pass rate on 500 NuminaMath problems, measured by valid
+          JSON outputs with non-empty hints and a present answer field.
+        </title>
+
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell>Model</cell>
+            <cell>CGM FT</cell>
+            <cell>Valid / 500</cell>
+          </row>
+
+          <row>
+            <cell>Qwen2.5-Math-7B</cell>
+            <cell>✓</cell>
+            <cell><alert>480</alert></cell>
+          </row>
+
+          <row>
+            <cell>Qwen2.5-Math-1.5B</cell>
+            <cell>✓</cell>
+            <cell>150</cell>
+          </row>
+
+          <row>
+            <cell>GPT-oss-20B</cell>
+            <cell>—</cell>
+            <cell>85</cell>
+          </row>
+
+          <row>
+            <cell>Llama-3.1-8B</cell>
+            <cell>—</cell>
+            <cell>11</cell>
+          </row>
+
+          <row>
+            <cell>Qwen2.5-Math-7B</cell>
+            <cell>—</cell>
+            <cell>2</cell>
+          </row>
+
+          <row>
+            <cell>Qwen2.5-Math-1.5B</cell>
+            <cell>—</cell>
+            <cell>0</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>
+      The <xref ref="tab_annotation"/> showcases an inferior model on our fine-tuned annotation schema performing vastly better than a stronger open-weight. For the exam CGM schema, please refer to Kaggle dataset, linked below.
+      </p>
+
+      <sidebyside margins="auto" valign="middle">
+        <table xml:id="tab_inference">
+          <title>Inference-time utility of CGM annotations.</title>
+
+          <tabular>
+            <row header="yes" bottom="minor">
+              <cell>CGM Variant</cell>
+              <cell>Accuracy</cell>
+              <cell>Avg. hints</cell>
+            </row>
+
+            <row>
+              <cell>Full</cell>
+              <cell>70.9%</cell>
+              <cell>2.03</cell>
+            </row>
+
+            <row>
+              <cell>No hints</cell>
+              <cell>41.8%</cell>
+              <cell>—</cell>
+            </row>
+
+            <row>
+              <cell>No facts</cell>
+              <cell>76.4%</cell>
+              <cell>2.48</cell>
+            </row>
+
+            <row>
+              <cell>Base</cell>
+              <cell>27.3%</cell>
+              <cell>—</cell>
+            </row>
+          </tabular>
+        </table>
+
+        <table xml:id="tab_hints">
+          <title>
+            Inference-time ablation of CGM annotations on the CGM gold problems
+            (N=55) using GPT-oss-20B.
+          </title>
+
+          <tabular>
+            <row header="yes" bottom="minor">
+              <cell>
+                <p>
+                  <md>
+                    \leq k
+                  </md>
+                </p>
+              </cell>
+              <cell>Hints</cell>
+              <cell>Hints + Facts</cell>
+            </row>
+
+            <row>
+              <cell>1</cell>
+              <cell>29.1%</cell>
+              <cell>32.7%</cell>
+            </row>
+
+            <row>
+              <cell>2</cell>
+              <cell>43.6%</cell>
+              <cell>50.9%</cell>
+            </row>
+
+            <row>
+              <cell>3</cell>
+              <cell>58.2%</cell>
+              <cell>61.8%</cell>
+            </row>
+
+            <row>
+              <cell>4</cell>
+              <cell>67.3%</cell>
+              <cell>65.5%</cell>
+            </row>
+
+            <row>
+              <cell>5</cell>
+              <cell>70.9%</cell>
+              <cell>70.9%</cell>
+            </row>
+
+            <row>
+              <cell>6</cell>
+              <cell>76.4%</cell>
+              <cell>70.9%</cell>
+            </row>
+          </tabular>
+        </table>
+      </sidebyside>
+
+      <p>
+        <xref ref="tab_inference"/> shows the use-case of the CGM dataset at inference-time, rather than during fine-tuning. The model is prompted to solve the problem, and the prompt itself carries additional information from the CGM dataset.
+       </p>
+      <p>
+        <xref ref="tab_hints"/> evaluates whether hints and facts are actually useful in problem-solving.
+       </p>
+
+       <p>
+        The core motivation of the CGM dataset is to evaluate whether a model does better at problem solving if it can first decompose the problem into its constituting domain-dependent facts and possible attack vectors (or hints). The results show promise at inference-time. Results of fine-tuned models are currently under development.
+       </p>
+
+       <p>
+        Relevant links (the current CGM dataset is private due to the double-blind review, the links below are of the older AIMO3 dataset which inspired the ongoing development):
+
+        <dl>
+          <li>
+            <title>Kaggle Dataset</title>
+            <p>
+              <url href="https://www.kaggle.com/datasets/taraashmittal/aimo-3" />
+            </p>
+          </li>
+          <li>
+            <title>Kaggle Discussion</title>
+            <p>
+              <url href="https://www.kaggle.com/competitions/ai-mathematical-olympiad-progress-prize-3/discussion/672656" />
+            </p>
+          </li>
+        </dl>
+       </p>
+    </subsubsection>
+  </subsection>
+</section>

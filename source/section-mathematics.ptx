@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="mathematics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Mathematics</title>
+
+  <p>
+  Here I'll list some cool math stuff I've done / am doing.
+  </p>
+
+  <subsection xml:id="pde">
+    <title>Numerical Methods for PDE's</title>
+    <p>
+      Recreational research, primarily working through an extensive list of topics provided in <url href="https://www.ehu.eus/aitor/">Aitor Bergara's</url> course on <url href="https://www.ehu.eus/aitor/irakas/fin/main.html"> numerical methods for PDE's</url>. Done under <url href="https://iiitd.ac.in/subhashreem">Dr. Subhashree Mohapatra</url>.
+    </p>
+
+<figure xml:id="fig_waves">
+  <caption>Forward in time, centered in space</caption>
+  <sidebyside  margins="auto" valign="middle">
+  <image source="advection_start">
+    <description><p>
+      Start of advection
+    </p></description>
+  </image>
+  <image source="figure_ftcs">
+    <description><p>
+FTCS failing
+    </p></description>
+  </image>
+  </sidebyside>
+</figure>
+
+  </subsection>
+</section>
