@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-3d" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>The World of 3D</title>
+
+    <p>
+        I do a ton of 3D design.
+        Here, I'll list as much as I can recall.
+    </p>
+
+    <subsection xml:id="uai">
+        <title>Unreal Authorized Instructor (UAI)</title>
+
+        <p>
+            As the title suggests, I have been certified by the Education &amp;
+            Training Partners Team at Epic Games in my ability to teach Unreal
+            Engine.
+        </p>
+
+        <figure xml:id="img_uai">
+            <caption>UAI</caption>
+            <image source="7c1622e2-74c9-4ae4-84f2-f1bdb8f1bfa2">
+                <shortdescription>UAI Badge</shortdescription>
+            </image>
+        </figure>
+    </subsection>
+
+<subsection xml:id="igda_iiitd">
+    <title>International Game Developers Association (IGDA)</title>
+
+    <p>
+        I am the current co-chair for the IIIT Delhi student chapter of the (IGDA), which is the world's largest nonprofit membership organization serving all individuals who create games.
+    </p>
+    
+</subsection>
+
+    <subsection xml:id="gamedev">
+        <title>Game Development with Unreal Engine</title>
+
+        <p>
+            I taught Unreal Engine in my university during the summer to about
+            100 students.
+        </p>
+
+
+    </subsection>
+</section>

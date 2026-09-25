@@ -1,32 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <section xml:id="mathematics" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Mathematics</title>
 
   <p>
-  Here I'll list some cool math stuff I've done / am doing.
+    Here I'll list some cool math stuff I've done / am doing.
   </p>
 
   <subsection xml:id="pde">
     <title>Numerical Methods for PDE's</title>
+
     <p>
-      Recreational research, primarily working through an extensive list of topics provided in <url href="https://www.ehu.eus/aitor/">Aitor Bergara's</url> course on <url href="https://www.ehu.eus/aitor/irakas/fin/main.html"> numerical methods for PDE's</url>. Done under <url href="https://iiitd.ac.in/subhashreem">Dr. Subhashree Mohapatra</url>.
+      Recreational research, primarily working through an extensive list of
+      topics provided in
+      <url href="https://www.ehu.eus/aitor/">Aitor Bergara's</url> course on
+      <url href="https://www.ehu.eus/aitor/irakas/fin/main.html"> numerical methods for PDE's</url>.
+      Done under
+      <url href="https://iiitd.ac.in/subhashreem">Dr. Subhashree Mohapatra</url>.
     </p>
 
-<figure xml:id="fig_waves">
-  <caption>Forward in time, centered in space</caption>
-  <sidebyside  margins="auto" valign="middle">
-  <image source="advection_start">
-    <description><p>
-      Start of advection
-    </p></description>
-  </image>
-  <image source="figure_ftcs">
-    <description><p>
-FTCS failing
-    </p></description>
-  </image>
-  </sidebyside>
-</figure>
+    <figure xml:id="fig_waves">
+      <caption>Forward in time, centered in space</caption>
+      <sidebyside margins="auto" valign="middle">
+        <image source="advection_start">
+          <description>
+            <p>
+              Start of advection
+            </p>
+          </description>
+        </image>
 
+        <image source="figure_ftcs">
+          <description>
+            <p>
+              FTCS failing, we see more ridges as time goes on
+            </p>
+          </description>
+        </image>
+      </sidebyside>
+    </figure>
+  </subsection>
+
+  <subsection xml:id="stemvibe">
+    <title>STEMvibe</title>
+
+    <p>
+      I've been involved with STEMvibe's national mathematics events for a while
+      now.
+      I've contributed problems for the 2025 Integral Cup finals in IIT Bombay
+      and the 2026 Olympiad in IIT Delhi.
+    </p>
+
+    <p>
+      I'll go ahead and list some of my favorite questions!
+    </p>
+
+    <subsubsection xml:id="integrals">
+      <title>Integrals</title>
+
+      <p>
+        Some of my integrals for the grand finale at IIT Bombay:
+      </p>
+
+      <p>
+        <ol>
+          <li>
+            <p>
+              <md number="yes">
+                \int_{-1}^{1}\sum_{a=1}^{2025}\sum_{b=1}^{2025}\left\lfloor \frac{x}{a+b}-\frac{1}{2}-\left\lfloor \frac{x}{a+b} \right\rfloor \right\rfloor \sin(a\pi x)\sin(b\pi x)\,\mathrm{d}x
+              </md>
+            </p>
+
+            <p>
+              An intimidating question but once you've got the floor term
+              figured out (which is just a binary 0/1 signal), it simplifies.
+              This question was featured on the Pringles Math Instagram channel.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <md number="yes">
+                \int_{0}^{5!} \sum_{n=0}^{\infty}\left\{\frac{x}{n!}\right\}\,\mathrm{d}x
+              </md>
+            </p>
+
+            <p>
+              A simple question which gets harder to deal with if we rewrite the
+              fractional part into identity minus floor.
+              Uses the periodicity of the fractional function.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <md number="yes">
+                \int_{\pi}^{\infty}\frac{\log_{\pi}(e)}{\pi x^2}\frac{x\pi^{x/\pi}-\pi^2}{1-\log_{\pi}x}\,\mathrm{d}x
+              </md>
+            </p>
+
+            <p>
+              A complicated looking question which simplifies under the
+              motivated <m>t=x/\pi</m> substitution.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <md number="yes">
+                \int_{-1}^{1}\cfrac{1}{1-\cfrac{x}{1+x-\cfrac{x^2}{1+x^2-\cfrac{x^3}{1+x^3-\cdots\cfrac{x^{2025}}{1+x^{2025}}}}}}\,\mathrm{d}x
+              </md>
+            </p>
+
+            <p>
+              An un-yielding question under conventional integration tricks;
+              this question rewards Olympiad-style thinking.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        Silver, a calculus YouTuber also made videos covering questions from the
+        entire competition on his channel.
+        This competition also made national headlines as the "largest
+        integration bee in the world".
+      </p>
+    </subsubsection>
+
+    <subsubsection xml:id="olympiads">
+      <title>Olympiads</title>
+
+      <p>
+        Some proof based questions I made:
+      </p>
+
+      <p>
+        <ol>
+          <li>
+            <p>
+              Define a sequence <m>\{a_k\}_{k=0}^{\infty}</m> with <m>a_0=1</m>
+              and
+              <md number="yes">
+                a_n=\cfrac{1}{1-\cfrac{i/2}{1+i/2-\cfrac{i/2}{1+i/2-\underbrace{\dots}_{\textnormal{$n$ times}}\cfrac{i/2}{1+i/2}}}}
+              </md>
+              where <m>i=\sqrt{-1}</m>.
+              Find the length of the path traced out by the points
+              <m>a_0\rightarrow a_1 \rightarrow a_2 \rightarrow \cdots</m> on
+              the complex plane.
+            </p>
+
+            <p>
+              An unconventional use for continued fractions.
+              This doesn't fall cleanly into recursion and can be solved
+              geometrically after simplification very quickly.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Alice and Bob play a game starting with a running total
+              <m>T = 0</m>.
+              They take turns adding an integer <m>k</m> from the set
+              <m>S = \{1, 2, 3, \dots, 15\}</m> to the total.
+              Let <m>n \ge 2</m> be a fixed integer.
+              The game terminates immediately when the total <m>T</m> becomes an
+              <m>n</m>-digit number (i.e., when <m>T \ge 10^{n-1}</m> ).
+              The player who makes the final move wins if the tens' digit of the
+              final total is even, and loses if the tens' digit is odd.
+              Assuming both players play optimally, determine for which values
+              of $n$ Alice has a winning strategy, and for which values of $n$
+              Bob has a winning strategy.
+            </p>
+
+            <p>
+              A fun twist I made by adding a constraint on the tens' digit of a
+              number.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Define two <m>2 \times 2</m> matrices:
+              <md>
+                L = \begin{pmatrix} 1 \amp 0 \\ 1 \amp 1 \end{pmatrix}, \quad R = \begin{pmatrix} 1 \amp 1 \\ 0 \amp 1 \end{pmatrix}.
+              </md>
+              We define a sequence of sets of vectors
+              <m>\{S_k\}_{k=1}^{\infty}</m> in <m>\mathbb{R}^2</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </subsubsection>
+  </subsection>
+
+  <subsection xml:id="evariste">
+    <title>Évariste</title>
+
+    <p>
+      Served as the coordinator of our university's mathematics society,
+      Évariste, named after Évariste Galois.
+    </p>
   </subsection>
 </section>
