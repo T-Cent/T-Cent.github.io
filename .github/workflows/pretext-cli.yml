@@ -12,9 +12,9 @@ on:
     # Runs on pull requests
     pull_request:
         branches: ["*"]
-    ## Runs on pushes to main
-    #push:
-    #    branches: ["main"]
+    # Runs on pushes to main
+    push:
+        branches: ["main"]
     # Runs on demand
     workflow_dispatch:
 
@@ -52,6 +52,9 @@ jobs:
                 fi
             - name: stage deployment
               run: pretext deploy --stage-only
+
+            - name: include 3D static site
+              run: cp -R 3D output/stage/
 
             - name: Bundle output/stage as artifact
               uses: actions/upload-artifact@v4
