@@ -13,8 +13,8 @@
     <introduction>
       <p>
         The aim of this website is to be a place for all my work.
-        It is possible that I occasionally forget adding something that I've done
-        here.
+        It is possible that I occasionally forget adding something that I've
+        done here.
       </p>
 
       <p>
@@ -23,67 +23,74 @@
       </p>
 
       <p>
-        An older version of my attempt at a portfolio website is <url href="./3D/index.html">here</url>. These were the times when I was working a lot with <c>A-Frame</c> and more 3D website stuff. (As a result, it is severely underdeveloped, but cool nonetheless because it was not AI-slopped together.)
+        An older version of my attempt at a portfolio website is
+        <url href="./3D/index.html">here</url>.
+        These were the times when I was working a lot with <c>A-Frame</c> and
+        more 3D website stuff.
+        (As a result, it is severely underdeveloped, but cool nonetheless
+        because it was not AI-slopped together.)
       </p>
     </introduction>
 
     <section xml:id="about-me">
       <title>About Me</title>
 
-<p>
-      My name is Taraash Mittal. I am currently a final-year undergraduate at the Indraprastha Institute of Information Technology (IIIT Delhi) and I got my schooling from Pragyan, Greater Noida.
-   </p>
+      <p>
+        My name is Taraash Mittal.
+        I am currently a final-year undergraduate at the Indraprastha Institute
+        of Information Technology (IIIT Delhi) and I got my schooling from
+        Pragyan, Greater Noida.
+      </p>
 
-   <p>
-
-   </p>
+      <p/>
     </section>
 
-  <section xml:id="resume">
-    <title>Resume</title>
+    <subsection xml:id="resume">
+      <title>Resume</title>
 
-    <p>
-      I maintain multiple variants of my resume, you can choose one that is most appropriate for your interests:
+      <p>
+        I maintain multiple variants of my resume, you can choose one that is
+        most appropriate for your interests:
+        <ul>
+          <li>
+            <p>
+              <url href="">Math</url>
+            </p>
+          </li>
 
-      <ul>
-        <li>
-          <p>
-            <url href="">Math</url>
-          </p>
-        </li>
-        <li>
-          <p>
-            <url href="">Design</url>
-          </p>
-        </li>
-        <li>
-          <p>
-            <url href="">CompSci</url>
-          </p>
-        </li>
-        <li>
-          <p>
-            <url href="">Complete</url>
-          </p>
-        </li>
-      </ul>
-    </p>
+          <li>
+            <p>
+              <url href="">Design</url>
+            </p>
+          </li>
 
-    <p>
-      I've tried to keep my resume's short and easy to read. You can always refer back to this website for additional details.
-    </p>
+          <li>
+            <p>
+              <url href="">CompSci</url>
+            </p>
+          </li>
 
+          <li>
+            <p>
+              <url href="">Complete</url>
+            </p>
+          </li>
+        </ul>
+      </p>
 
-    
-  </section>
+      <p>
+        I've tried to keep my resume's short and easy to read.
+        You can always refer back to this website for additional details.
+      </p>
+    </subsection>
 
-<section xml:id="contact-me">
-  <title>Contact Me</title>
-<p>
-  You can contact me via
-</p>
+    <subsection xml:id="contact-me">
+      <title>Contact Me</title>
 
-</section>
+      <p>
+        You can contact me via
+      </p>
+    </subsection>
 
     <xi:include href="./section-research.ptx"/>
     <xi:include href="./section-mathematics.ptx"/>

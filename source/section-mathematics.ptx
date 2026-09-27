@@ -182,7 +182,7 @@
           <li>
             <p>
               Define two <m>2 \times 2</m> matrices:
-              <md>
+              <md number="yes">
                 L = \begin{pmatrix} 1 \amp 0 \\ 1 \amp 1 \end{pmatrix}, \quad R = \begin{pmatrix} 1 \amp 1 \\ 0 \amp 1 \end{pmatrix}.
               </md>
               We define a sequence of sets of vectors
