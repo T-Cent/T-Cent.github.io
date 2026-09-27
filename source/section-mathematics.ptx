@@ -22,7 +22,7 @@
     <figure xml:id="fig_waves">
       <caption>Forward in time, centered in space</caption>
       <sidebyside margins="auto" valign="middle">
-        <image source="advection_start">
+        <image source="pdes/advection_start">
           <description>
             <p>
               Start of advection
@@ -30,7 +30,7 @@
           </description>
         </image>
 
-        <image source="figure_ftcs">
+        <image source="pdes/figure_ftcs">
           <description>
             <p>
               FTCS failing, we see more ridges as time goes on
@@ -186,7 +186,24 @@
                 L = \begin{pmatrix} 1 \amp 0 \\ 1 \amp 1 \end{pmatrix}, \quad R = \begin{pmatrix} 1 \amp 1 \\ 0 \amp 1 \end{pmatrix}.
               </md>
               We define a sequence of sets of vectors
-              <m>\{S_k\}_{k=1}^{\infty}</m> in <m>\mathbb{R}^2</m>
+              <m>\{S_k\}_{k=1}^{\infty}</m> in <m>\mathbb{R}^2</m>, generated as
+              follows, starting with
+              <md number="yes">
+                S_1 = \left\{ \begin{pmatrix} 1 \amp 1 \end{pmatrix} ^ T\right\}
+              </md>,
+              for <m>n \ge 1</m>, the next set <m>S_{n+1}</m> is formed by
+              applying both <m>L</m> and <m>R</m> to every vector in <m>S_n</m>:
+              <md number="yes">
+                S_{n+1} = \{ L\mathbf{v} \mid \mathbf{v} \in S_n \} \cup \{ R\mathbf{v} \mid \mathbf{v} \in S_n \}.
+              </md>
+              For any vector <m>\mathbf{v} \in \mathbb{R}^2</m>, define its
+              fractional value as <m>V(\mathbf{v}) = x/y</m>.
+              Prove that the set of all fractional values generated across all
+              sets, that is
+              <md number="yes">
+                \{V(\mathbf{v}) \mid \mathbf{v} \in \bigcup_{n=1}^\infty S_n \},
+              </md>
+              contains every positive rational number exactly once.
             </p>
           </li>
         </ol>

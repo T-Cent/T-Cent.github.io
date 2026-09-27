@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="section-3d" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>The World of 3D</title>
+<section xml:id="3d" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>3D</title>
 
     <p>
         I do a ton of 3D design.
@@ -19,7 +19,7 @@
 
         <figure xml:id="img_uai">
             <caption>UAI</caption>
-            <image source="7c1622e2-74c9-4ae4-84f2-f1bdb8f1bfa2">
+            <image source="UAI/7c1622e2-74c9-4ae4-84f2-f1bdb8f1bfa2">
                 <shortdescription>UAI Badge</shortdescription>
             </image>
         </figure>

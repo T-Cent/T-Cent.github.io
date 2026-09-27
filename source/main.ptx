@@ -3,8 +3,8 @@
 <pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
   <docinfo>
     <directories external="../assets"/>
+    <math-package latex-name="fontawesome5" mathjax-name="fontawesome5"/>
     <document-id>taraash-mittal-portfolio</document-id>
-    <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
   </docinfo>
 
   <article xml:id="portfolio">
@@ -13,7 +13,7 @@
     <introduction>
       <p>
         The aim of this website is to be a place for all my work.
-        It is possible that I occasional forget adding something that I've done
+        It is possible that I occasionally forget adding something that I've done
         here.
       </p>
 
@@ -27,7 +27,66 @@
       </p>
     </introduction>
 
+    <section xml:id="about-me">
+      <title>About Me</title>
+
+<p>
+      My name is Taraash Mittal. I am currently a final-year undergraduate at the Indraprastha Institute of Information Technology (IIIT Delhi) and I got my schooling from Pragyan, Greater Noida.
+   </p>
+
+   <p>
+
+   </p>
+    </section>
+
+  <section xml:id="resume">
+    <title>Resume</title>
+
+    <p>
+      I maintain multiple variants of my resume, you can choose one that is most appropriate for your interests:
+
+      <ul>
+        <li>
+          <p>
+            <url href="">Math</url>
+          </p>
+        </li>
+        <li>
+          <p>
+            <url href="">Design</url>
+          </p>
+        </li>
+        <li>
+          <p>
+            <url href="">CompSci</url>
+          </p>
+        </li>
+        <li>
+          <p>
+            <url href="">Complete</url>
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      I've tried to keep my resume's short and easy to read. You can always refer back to this website for additional details.
+    </p>
+
+
+    
+  </section>
+
+<section xml:id="contact-me">
+  <title>Contact Me</title>
+<p>
+  You can contact me via
+</p>
+
+</section>
+
     <xi:include href="./section-research.ptx"/>
     <xi:include href="./section-mathematics.ptx"/>
+    <xi:include href="./section-3d.ptx"/>
   </article>
 </pretext>

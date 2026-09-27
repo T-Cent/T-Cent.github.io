@@ -39,7 +39,7 @@
     <sidebyside margins="auto" valign="middle">
       <figure>
         <caption>Input sketch: fish</caption>
-        <image source="n01440764_sketch_15.jpg">
+        <image source="texsketch/n01440764_sketch_15.jpg">
           <description>
             <p>
               Fish diagram
@@ -50,7 +50,7 @@
 
       <figure>
         <caption>Basic shading</caption>
-        <image source="base_n01440764_sketch_15.png">
+        <image source="texsketch/base_n01440764_sketch_15.png">
           <description>
             <p>
               Basic coloring using our method
@@ -61,7 +61,7 @@
 
       <figure>
         <caption>Cel shading</caption>
-        <image source="anime_sketches_n01440764_sketch_15.png">
+        <image source="texsketch/anime_sketches_n01440764_sketch_15.png">
           <description>
             <p>
               Specialized cel-shading/anime style coloring
@@ -72,7 +72,7 @@
 
       <figure>
         <caption>Watercolor</caption>
-        <image source="watercolor_sketches_n01440764_sketch_15.png">
+        <image source="texsketch/watercolor_sketches_n01440764_sketch_15.png">
           <description>
             <p>
               Specialized watercolor style coloring
@@ -85,7 +85,7 @@
     <sidebyside margins="auto" valign="middle">
       <figure>
         <caption>Input sketch: grapes</caption>
-        <image source="grapes_7441.png">
+        <image source="texsketch/grapes_7441.png">
           <description>
             <p>
               Grapes
@@ -97,7 +97,7 @@
 
       <figure>
         <caption>Cel shading</caption>
-        <image source="anime_sketches_grapes_7441.png">
+        <image source="texsketch/anime_sketches_grapes_7441.png">
           <description>
             <p>
               Specialized cel-shading/anime style coloring
@@ -108,7 +108,7 @@
 
       <figure>
         <caption>Watercolor</caption>
-        <image source="watercolor_sketches_grapes_7441.png">
+        <image source="texsketch/watercolor_sketches_grapes_7441.png">
           <description>
             <p>
               Specialized watercolor style coloring
@@ -136,6 +136,7 @@
           <title>Website</title>
 
           <p>
+              <icon name="linkedin"/>
             <url href="https://graphics-research-group.github.io/TexSketch/"/>
           </p>
         </li>
@@ -244,7 +245,7 @@
       </table>
 
       <p>
-      The <xref ref="tab_annotation"/> showcases an inferior model on our fine-tuned annotation schema performing vastly better than a stronger open-weight. For the exam CGM schema, please refer to Kaggle dataset, linked below.
+      <xref ref="tab_annotation"/> showcases an inferior model on our fine-tuned annotation schema performing vastly better than a stronger open-weight. For the exam CGM schema, please refer to Kaggle dataset, linked below.
       </p>
 
       <sidebyside margins="auto" valign="middle">
