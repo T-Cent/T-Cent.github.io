@@ -55,7 +55,34 @@
         <title>Contact Me</title>
 
         <p>
-            You can contact me via
+            You can contact me on:
+            <ul>
+                <li>
+                    <p>
+                        <url href="mailto:taraash@stemvibe.org">taraash@stemvibe.org</url>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <url href="mailto:taraash23552@iiitd.ac.in">taraash23552@iiitd.ac.in</url>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <url href="t.me/TaraashMittal">Telegram</url>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <url href="https://discord.com/users/762599488174161921">Discord</url>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <url href="https://linkedin.com/in/taraash-mittal">LinkedIn</url>
+                    </p>
+                </li>
+            </ul>
         </p>
     </subsection>
 </section>

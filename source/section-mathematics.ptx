@@ -41,6 +41,10 @@
         </image>
       </sidebyside>
     </figure>
+
+    <p>
+      The interactive MATLAB demos made can be found <url href="https://drive.mathworks.com/sharing/caa12ec7-ee87-49f8-98af-80aa77ae4095/PDE.mlx">at this link</url> and the notes made are <url href="https://www.overleaf.com/read/ynqqhzhdspyv#b52999">here</url>.   
+    </p>
   </subsection>
 
   <subsection xml:id="stemvibe-math">
@@ -219,9 +223,17 @@
   <subsection xml:id="evariste">
     <title>Évariste</title>
 
-    <p>
+<introduction>
+  <p>
       Served as the coordinator of our university's mathematics society,
       Évariste, named after Évariste Galois.
-    </p>
+  </p>
+
+  <p>
+    Did a LOT of fun things! Some relevant work is also listed in <xref ref="club-events"/>.
+  </p>
+</introduction>
+
+
   </subsection>
 </section>

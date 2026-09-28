@@ -77,10 +77,8 @@
     <!-- boulder, salem, and denver are also available, each with its own -->
     <!-- color attributes.  See                                           -->
     <!-- https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options -->
-    <!--
-      <html>
+      <!-- <html>
         <css theme="default-modern"/>
         <baseurl href="https://changetomywebsite.org/"/>
-      </html>
-    -->
+      </html> -->
 </publication>

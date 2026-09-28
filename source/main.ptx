@@ -15,7 +15,7 @@
       <p>
         The aim of this website is to be a place for all my work.
         It is possible that I occasionally forget adding something that I've
-        done here.
+        done here. Do also note that this website is under active development and may take some time to be comprehensive.
       </p>
 
       <p>
@@ -39,5 +39,6 @@
     <xi:include href="./section-research.ptx"/>
     <xi:include href="./section-mathematics.ptx"/>
     <xi:include href="./section-3d.ptx"/>
+    <xi:include href="./section-compsci.ptx"/>
   </article>
 </pretext>
