@@ -35,6 +35,26 @@
             (IGDA), which is the world's largest nonprofit membership
             organization serving all individuals who create games.
         </p>
+
+        <figure>
+            <caption>IGDA IIIT Delhi</caption>
+            <image source="igda/igda_logo.png" width="25%">
+                <description>
+                    <p>
+                        Our logo
+                    </p>
+                </description>
+            </image>
+        </figure>
+
+        <p>
+            You can join our
+            <url href="https://discord.gg/muZEEAHsg6">official Discord server</url>
+            which is an informal place to talk everything game dev related.
+            Additionally, our website is
+            <url href="https://igda.org/chapters/india-iiit-delhi/"/>.
+            More work done for this is listed in <xref ref="club-events"/>.
+        </p>
     </subsection>
 
     <subsection xml:id="gamedev">
@@ -44,6 +64,15 @@
             I taught Unreal Engine in my university during the summer to about
             100 students.
         </p>
+
+        <figure>
+            <caption>Some images from the course</caption>
+            <stack>
+                <image source="gamedev/gd1.jpeg"/>
+                <image source="gamedev/gd2.jpeg"/>
+                <image source="gamedev/gd3.jpeg"/>
+            </stack>
+        </figure>
     </subsection>
 
     <subsection xml:id="artstation">
@@ -51,11 +80,47 @@
 
         <p>
             I maintain a collection of my work done in Blender, Unreal Engine,
-            Designer and more on ArtStation.
+            Designer and more on
+            <url href="https://artstation.com/taraash">my ArtStation</url>.
         </p>
 
         <p>
-            Some more pretty pictures:
+            Some recent work:
+        </p>
+
+        <figure>
+            <caption>Henfield Part 1</caption>
+            <image source="artstation/house.png">
+                <description>
+                    <p>
+                        House in Blender and environment in Unreal
+                    </p>
+                </description>
+            </image>
+        </figure>
+
+        <figure>
+            <caption>Henfield Part 2</caption>
+            <image source="artstation/env.png">
+                <description>
+                    <p>
+                        Buildings in Blender via GN and environment in Unreal
+                        via PCG
+                    </p>
+                </description>
+            </image>
+        </figure>
+    </subsection>
+
+    <subsection xml:id="3daf">
+        <title>3D Animation and Filmmaking</title>
+
+        <p>
+            I've been teaching Blender and related tools as part of the 3D
+            animation and filmmaking course in our university for the past two
+            offerings.
+            Taught more than 50 students, hopefully they all actually enjoyed
+            it!
         </p>
     </subsection>
 </section>

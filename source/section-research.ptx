@@ -94,7 +94,6 @@
         </image>
       </figure>
 
-
       <figure>
         <caption>Cel shading</caption>
         <image source="texsketch/anime_sketches_grapes_7441.png">
@@ -124,10 +123,7 @@
       We do that automatically.
       Color pallette hints may be produced in the prompt given to the vision
       model, if required.
-
     </p>
-
-
 
     <p>
       Relevant links:
@@ -136,7 +132,7 @@
           <title>Website</title>
 
           <p>
-              <icon name="linkedin"/>
+            <icon name="linkedin"/>
             <url href="https://graphics-research-group.github.io/TexSketch/"/>
           </p>
         </li>
@@ -171,11 +167,11 @@
   <subsection xml:id="stemvibe-research">
     <title>STEMvibe Research</title>
 
-<introduction>
-  <p>
-      Formed and currently lead the research department of STEMvibe.
-  </p>
-</introduction>
+    <introduction>
+      <p>
+        Formed and currently lead the research department of STEMvibe.
+      </p>
+    </introduction>
 
     <subsubsection xml:id="cgm">
       <title>ContrastGuidedMath</title>
@@ -192,7 +188,8 @@
       </p>
 
       <p>
-        This work was inspired by the third progress prize of the AIMO on Kaggle, funded by XTX Markets.
+        This work was inspired by the third progress prize of the AIMO on
+        Kaggle, funded by XTX Markets.
       </p>
 
       <table xml:id="tab_annotation">
@@ -247,133 +244,148 @@
       </table>
 
       <p>
-      <xref ref="tab_annotation"/> showcases an inferior model on our fine-tuned annotation schema performing vastly better than a stronger open-weight. For the exam CGM schema, please refer to Kaggle dataset, linked below.
+        <xref ref="tab_annotation"/> showcases an inferior model on our
+        fine-tuned annotation schema performing vastly better than a stronger
+        open-weight.
+        For the exam CGM schema, please refer to Kaggle dataset, linked below.
       </p>
 
-      <sidebyside margins="auto" valign="middle">
-        <table xml:id="tab_inference">
-          <title>Inference-time utility of CGM annotations.</title>
+      <table xml:id="tab_inference">
+        <title>Inference-time utility of CGM annotations.</title>
 
-          <tabular>
-            <row header="yes" bottom="minor">
-              <cell>CGM Variant</cell>
-              <cell>Accuracy</cell>
-              <cell>Avg. hints</cell>
-            </row>
+        <tabular>
+          <row header="yes" bottom="minor">
+            <cell>CGM Variant</cell>
+            <cell>Accuracy</cell>
+            <cell>Avg. hints</cell>
+          </row>
 
-            <row>
-              <cell>Full</cell>
-              <cell>70.9%</cell>
-              <cell>2.03</cell>
-            </row>
+          <row>
+            <cell>Full</cell>
+            <cell>70.9%</cell>
+            <cell>2.03</cell>
+          </row>
 
-            <row>
-              <cell>No hints</cell>
-              <cell>41.8%</cell>
-              <cell>—</cell>
-            </row>
+          <row>
+            <cell>No hints</cell>
+            <cell>41.8%</cell>
+            <cell>—</cell>
+          </row>
 
-            <row>
-              <cell>No facts</cell>
-              <cell>76.4%</cell>
-              <cell>2.48</cell>
-            </row>
+          <row>
+            <cell>No facts</cell>
+            <cell>76.4%</cell>
+            <cell>2.48</cell>
+          </row>
 
-            <row>
-              <cell>Base</cell>
-              <cell>27.3%</cell>
-              <cell>—</cell>
-            </row>
-          </tabular>
-        </table>
+          <row>
+            <cell>Base</cell>
+            <cell>27.3%</cell>
+            <cell>—</cell>
+          </row>
+        </tabular>
+      </table>
 
-        <table xml:id="tab_hints">
-          <title>
-            Inference-time ablation of CGM annotations on the CGM gold problems
-            (N=55) using GPT-oss-20B.
-          </title>
+      <table xml:id="tab_hints">
+        <title>
+          Inference-time ablation of CGM annotations on the CGM gold problems
+          (N=55) using GPT-oss-20B.
+        </title>
 
-          <tabular>
-            <row header="yes" bottom="minor">
-              <cell>
-                <p>
-                  <md>
-                    \leq k
-                  </md>
-                </p>
-              </cell>
-              <cell>Hints</cell>
-              <cell>Hints + Facts</cell>
-            </row>
+        <tabular>
+          <row header="yes" bottom="minor">
+            <cell>
+              <p>
+                <md>
+                  \leq k
+                </md>
+              </p>
+            </cell>
+            <cell>Hints</cell>
+            <cell>Hints + Facts</cell>
+          </row>
 
-            <row>
-              <cell>1</cell>
-              <cell>29.1%</cell>
-              <cell>32.7%</cell>
-            </row>
+          <row>
+            <cell>1</cell>
+            <cell>29.1%</cell>
+            <cell>32.7%</cell>
+          </row>
 
-            <row>
-              <cell>2</cell>
-              <cell>43.6%</cell>
-              <cell>50.9%</cell>
-            </row>
+          <row>
+            <cell>2</cell>
+            <cell>43.6%</cell>
+            <cell>50.9%</cell>
+          </row>
 
-            <row>
-              <cell>3</cell>
-              <cell>58.2%</cell>
-              <cell>61.8%</cell>
-            </row>
+          <row>
+            <cell>3</cell>
+            <cell>58.2%</cell>
+            <cell>61.8%</cell>
+          </row>
 
-            <row>
-              <cell>4</cell>
-              <cell>67.3%</cell>
-              <cell>65.5%</cell>
-            </row>
+          <row>
+            <cell>4</cell>
+            <cell>67.3%</cell>
+            <cell>65.5%</cell>
+          </row>
 
-            <row>
-              <cell>5</cell>
-              <cell>70.9%</cell>
-              <cell>70.9%</cell>
-            </row>
+          <row>
+            <cell>5</cell>
+            <cell>70.9%</cell>
+            <cell>70.9%</cell>
+          </row>
 
-            <row>
-              <cell>6</cell>
-              <cell>76.4%</cell>
-              <cell>70.9%</cell>
-            </row>
-          </tabular>
-        </table>
-      </sidebyside>
+          <row>
+            <cell>6</cell>
+            <cell>76.4%</cell>
+            <cell>70.9%</cell>
+          </row>
+        </tabular>
+      </table>
 
       <p>
-        <xref ref="tab_inference"/> shows the use-case of the CGM dataset at inference-time, rather than during fine-tuning. The model is prompted to solve the problem, and the prompt itself carries additional information from the CGM dataset.
-       </p>
+        <xref ref="tab_inference"/> shows the use-case of the CGM dataset at
+        inference-time, rather than during fine-tuning.
+        The model is prompted to solve the problem, and the prompt itself
+        carries additional information from the CGM dataset.
+      </p>
+
       <p>
-        <xref ref="tab_hints"/> evaluates whether hints and facts are actually useful in problem-solving.
-       </p>
+        <xref ref="tab_hints"/> evaluates whether hints and facts are actually
+        useful in problem-solving.
+      </p>
 
-       <p>
-        The core motivation of the CGM dataset is to evaluate whether a model does better at problem solving if it can first decompose the problem into its constituting domain-dependent facts and possible attack vectors (or hints). The results show promise at inference-time. Results of fine-tuned models are currently under development.
-       </p>
+      <p>
+        The core motivation of the CGM dataset is to evaluate whether a model
+        does better at problem solving if it can first decompose the problem
+        into its constituting domain-dependent facts and possible attack vectors
+        (or hints).
+        The results show promise at inference-time.
+        Results of fine-tuned models are currently under development.
+      </p>
 
-       <p>
-        Relevant links (the current CGM dataset is private due to the double-blind review, the links below are of the older AIMO3 dataset which inspired the ongoing development):
-
+      <p>
+        Relevant links (the current CGM dataset is private due to the
+        double-blind review, the links below are of the older AIMO3 dataset
+        which inspired the ongoing development):
         <dl>
           <li>
             <title>Kaggle Dataset</title>
+
             <p>
-              <url href="https://www.kaggle.com/datasets/taraashmittal/aimo-3" />
+              <url href="https://www.kaggle.com/datasets/taraashmittal/aimo-3"/>
             </p>
           </li>
+
           <li>
             <title>Kaggle Discussion</title>
+
             <p>
-              <url href="https://www.kaggle.com/competitions/ai-mathematical-olympiad-progress-prize-3/discussion/672656" />
+              <url href="https://www.kaggle.com/competitions/ai-mathematical-olympiad-progress-prize-3/discussion/672656"/>
             </p>
           </li>
         </dl>
-       </p>
+      </p>
     </subsubsection>
   </subsection>
 </section>

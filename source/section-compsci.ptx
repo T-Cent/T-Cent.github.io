@@ -5,7 +5,7 @@
 
     <introduction>
         <p>
-            My uni is primarily only know for computer science, so I've bound to have some work here. Even though most of the work listed here was done for fun, some was coursework.
+            My uni is primarily only know for computer science, so I'm bound to have some work here. Even though most of the work listed here was done for fun, some was coursework.
         </p>
     </introduction>
 
@@ -14,7 +14,7 @@
 
         <introduction>
             <p>
-                All events I conducted which involved computers.
+                All events I conducted which involved computers in some capacity.
             </p>
         </introduction>
 
@@ -22,10 +22,28 @@
             <title>Intro to FRACTRAN</title>
 
             <p>
-                Ever heard of FRACTRAN? It's a Turing-complete esoteric programming language developed by John Conway, built entirely using fractions.
+                Ever heard of FRACTRAN? It's a Turing-complete esoteric programming language developed by John Conway, built entirely using fractions. My writeup covering basic FRACTRAN can be found <url href="https://drive.google.com/file/d/15zQY3kjLBzO67T0lvAPYP4NhspDzJ3o4/view?usp=drivesdk">here</url>.
             </p>
             
         </subsubsection>
+
+    <subsubsection xml:id="pwnhub">
+        <title>PWNHUB</title>
+
+        <p>
+            A capture the flag style tournament I conducted where participants had to navigate clues in an Ubuntu box and finally email us the key they retrieved. The write-ups are on the Évariste club website.
+        </p>
+        
+    </subsubsection>
+
+<subsubsection xml:id="the-fury">
+    <title>The Fury</title>
+
+    <p>
+        An online clone of Magic: The Gathering built entirely by Claude. 
+    </p>
+    
+</subsubsection>
         
     </subsection>
 

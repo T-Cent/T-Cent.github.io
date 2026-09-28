@@ -132,8 +132,8 @@
       <p>
         Silver, a calculus YouTuber also made videos covering questions from the
         entire competition on his channel.
-        This competition also made national headlines as the "largest
-        integration bee in the world".
+        This competition also made national headlines as the <q>largest
+        integration bee in the world</q>.
       </p>
     </subsubsection>
 
@@ -178,7 +178,7 @@
               The player who makes the final move wins if the tens' digit of the
               final total is even, and loses if the tens' digit is odd.
               Assuming both players play optimally, determine for which values
-              of $n$ Alice has a winning strategy, and for which values of $n$
+              of <m>n</m> Alice has a winning strategy, and for which values of <m>n</m>
               Bob has a winning strategy.
             </p>
 
@@ -223,7 +223,6 @@
   <subsection xml:id="evariste">
     <title>Évariste</title>
 
-<introduction>
   <p>
       Served as the coordinator of our university's mathematics society,
       Évariste, named after Évariste Galois.
@@ -232,8 +231,42 @@
   <p>
     Did a LOT of fun things! Some relevant work is also listed in <xref ref="club-events"/>.
   </p>
-</introduction>
 
+<p>
+  Mathematically relevant stuff:
+
+  <ul>
+    <li>
+      <p>
+        Led preparations for the Simon Marais Mathematics Competition.
+      </p>
+    </li>
+    <li>
+      <p>
+        Problems of the week! Sent out a collection of fun problems, roughly each week for a month and checked every submission.
+      </p>
+    </li>
+    <li>
+      <p>
+        Held integration bees to help participants prep will for The Integral Cup.
+      </p>
+    </li>
+    <li>
+      <p>
+        Taught an intro to proofs sessions which say more than a hundred participants.
+      </p>
+    </li>
+    <li>
+      <p>
+        Bought some Hagoromo chalk via a club contribution effort :)
+      </p>
+    </li>
+  </ul>
+</p>
+
+<p>
+  <url href="https://instagram.com/evariste.iiitd">Instagram</url> <midpoint /> <url href="evariste-iiitd.github.io">Website</url> <midpoint /> <url href="mailto:evariste@sc.iiitd.ac.in">Email</url> <midpoint /> <url href="https://t.me/joinchat/Da8m6kMPZmX7g93YWxlnKw">Telegram</url> <midpoint /> <url href="http://bit.ly/EvaristeClub">Reddit</url>
+</p>
 
   </subsection>
 </section>
