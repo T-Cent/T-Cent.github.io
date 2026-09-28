@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-about-me" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>About Me</title>
+
+
+      <p>
+        My name is Taraash Mittal.
+        I am currently a final-year undergraduate at the Indraprastha Institute
+        of Information Technology (IIIT Delhi) and I got my schooling from
+        Pragyan, Greater Noida.
+      </p>
+
+      <p/>
+    </section>
+
+    <subsection xml:id="resume">
+      <title>Resume</title>
+
+      <p>
+        I maintain multiple variants of my resume, you can choose one that is
+        most appropriate for your interests:
+        <ul>
+          <li>
+            <p>
+              <url href="">Math</url>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <url href="">Design</url>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <url href="">CompSci</url>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <url href="">Complete</url>
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        I've tried to keep my resume's short and easy to read.
+        You can always refer back to this website for additional details.
+      </p>
+    </subsection>
+
+    <subsection xml:id="contact-me">
+      <title>Contact Me</title>
+
+      <p>
+        You can contact me via
+      </p>
+    </subsection>
+
+    
+
+</section>

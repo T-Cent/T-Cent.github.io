@@ -21,7 +21,7 @@
 
     <figure>
       <caption>Our pipeline</caption>
-      <image source="pipeline.png" width="100%">
+      <image source="texsketch/pipeline.png" width="100%">
         <description>
           <p>
             Our pipeline describing the workflow
