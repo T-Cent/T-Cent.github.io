@@ -3,9 +3,11 @@
 <section xml:id="mathematics" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Mathematics</title>
 
+<introduction>
   <p>
     Here I'll list some cool math stuff I've done / am doing.
   </p>
+</introduction>
 
   <subsection xml:id="pde">
     <title>Numerical Methods for PDE's</title>
@@ -44,16 +46,19 @@
   <subsection xml:id="stemvibe-math">
     <title>STEMvibe</title>
 
-    <p>
+    <introduction>
+      <p>
       I've been involved with STEMvibe's national mathematics events for a while
       now.
       I've contributed problems for the 2025 Integral Cup finals in IIT Bombay
       and the 2026 Olympiad in IIT Delhi.
-    </p>
 
-    <p>
       I'll go ahead and list some of my favorite questions!
-    </p>
+      </p>
+    </introduction>
+
+
+        
 
     <subsubsection xml:id="integrals">
       <title>Integrals</title>

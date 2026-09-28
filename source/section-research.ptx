@@ -16,7 +16,7 @@
       TexSketch: Bringing Texture-Aware Colorization to Sketches was work done
       under the Graphics Research Group in IIIT Delhi which was accepted at the
       AI 4 Visual Arts workshop at the European Conference on Computer Vision,
-      with <em>oral spotlight</em>.
+      <em>with oral spotlight</em>.
     </p>
 
     <figure>
@@ -171,9 +171,11 @@
   <subsection xml:id="stemvibe-research">
     <title>STEMvibe Research</title>
 
-    <p>
+<introduction>
+  <p>
       Formed and currently lead the research department of STEMvibe.
-    </p>
+  </p>
+</introduction>
 
     <subsubsection xml:id="cgm">
       <title>ContrastGuidedMath</title>
